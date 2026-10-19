@@ -1,6 +1,7 @@
 import { getImageProps } from "next/image";
 import { campaign, nav } from "@/content";
 import { Brand } from "@/components/Brand";
+import { Words } from "@/components/Words";
 
 /** The orange campaign at the top: the menu, the promise and the booking on the left, the portrait in the middle
  *  over the word « CRÉATION. », the big line on the right. */
@@ -15,25 +16,30 @@ export function Campaign() {
   });
   return (
     <div className="campaign">
-      <header className="wrap">
-        <Brand />
-        <nav aria-label="Navigation principale">
-          {nav.links.map((l) => (
-            <a key={l.href} href={l.href}>
-              {l.label}
+      {/* the glass bar floats at the top and follows the page (Motion.tsx turns it dark-on-light over the cream) */}
+      <header className="top">
+        <div className="bar">
+          <div className="bar-pill">
+            <Brand />
+            <nav aria-label="Navigation principale">
+              {nav.links.map((l) => (
+                <a key={l.href} href={l.href}>
+                  {l.label}
+                </a>
+              ))}
+            </nav>
+            <a className="nav-cta" href="#reservation">
+              {nav.cta}
             </a>
-          ))}
-        </nav>
-        <a className="nav-cta" href="#reservation">
-          {nav.cta}
-        </a>
+          </div>
+        </div>
       </header>
       <section className="campaign-hero" id="contenu">
         <div className="wrap campaign-inner">
           <div className="campaign-left">
             <p className="eyebrow">{campaign.eyebrow}</p>
             <h1>
-              {campaign.title} <em>{campaign.titleEnd}</em>
+              <Words text={campaign.title} /> <em><Words text={campaign.titleEnd} start={campaign.title.split(" ").length} /></em>
             </h1>
             <p className="campaign-description">{campaign.text}</p>
             <a className="button campaign-button" href="#reservation">
@@ -60,9 +66,12 @@ export function Campaign() {
           </div>
           <div className="campaign-right">
             <p className="campaign-title">
-              {campaign.big[0]}
+              <Words text={campaign.big[0]} start={0} />
               <br />
-              {campaign.big[1]} <span>{campaign.big[2]}</span>
+              <Words text={campaign.big[1]} start={campaign.big[0].split(" ").length} />{" "}
+              <span>
+                <Words text={campaign.big[2]} start={campaign.big[0].split(" ").length + campaign.big[1].split(" ").length} />
+              </span>
             </p>
             <div className="campaign-aside">
               <p>

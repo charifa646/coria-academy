@@ -7,8 +7,32 @@ import { useEffect } from "react";
  *  Nothing runs for visitors who asked their device for less motion: the page is then still and complete. */
 export function Motion() {
   useEffect(() => {
+    // the glass bar turns light over the cream booking section (this runs whatever the motion setting)
+    const bar = document.querySelector<HTMLElement>(".bar");
+    const booking = document.querySelector<HTMLElement>(".reservation");
+    let frame = 0;
+    const tone = () => {
+      frame = 0;
+      if (!bar || !booking) return;
+      const r = booking.getBoundingClientRect();
+      const point = parseFloat(getComputedStyle(booking, "::before").height) || 0;
+      const y = bar.getBoundingClientRect().top + 32;
+      const light = r.top + point * 0.6 < y && r.bottom > y;
+      bar.dataset.tone = light ? "light" : "dark";
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(tone);
+    };
+    tone();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
     const root = document.documentElement;
-    if (!root.classList.contains("anim")) return;
+    if (!root.classList.contains("anim"))
+      return () => {
+        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("resize", onScroll);
+      };
 
     const blocks = document.querySelectorAll<HTMLElement>("[data-reveal]");
     const show = (el: Element) => el.classList.add("is-in");
@@ -43,6 +67,8 @@ export function Motion() {
     }
 
     return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
       io?.disconnect();
       if (button && fine) {
         button.removeEventListener("pointermove", move);

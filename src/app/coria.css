@@ -26,7 +26,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 25px;
+  scroll-padding-top: 100px;
 }
 body {
   margin: 0;
@@ -60,7 +60,7 @@ button:focus-visible {
   background: white;
   color: #24120b;
   padding: 15px;
-  z-index: 20;
+  z-index: 100;
 }
 .skip:focus {
   top: 10px;
@@ -134,29 +134,85 @@ em {
   color: #fff5e8;
   overflow: hidden;
 }
-.campaign header {
+.campaign header.top {
   position: relative;
-  z-index: 6;
+  z-index: 60;
   height: 110px;
+}
+/* the glass bar: a pill of frosted glass with the brand, the links and the booking button; it stays at the top of
+   the screen while the page scrolls */
+.bar {
+  position: fixed;
+  inset: 18px 0 auto;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--gutter);
+  pointer-events: none;
+}
+.bar-pill {
+  pointer-events: auto;
+  width: min(var(--width), 100%);
+  min-height: 64px;
+  padding: 9px 10px 9px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 25px;
-}
-.campaign header .brand {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(18px) saturate(150%);
+  box-shadow:
+    0 10px 30px rgba(60, 10, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
   color: #fff6ea;
+  transition:
+    background-color 0.4s,
+    border-color 0.4s,
+    color 0.4s;
 }
-.campaign header nav {
+.bar-pill .brand {
+  color: inherit;
+}
+.bar-pill nav {
   display: flex;
   gap: 40px;
   font-size: var(--t-small);
 }
+.bar-pill nav a {
+  opacity: 0.88;
+  transition: opacity 0.2s;
+}
+.bar-pill nav a:hover {
+  opacity: 1;
+}
 .nav-cta {
   font-size: var(--t-small);
-  border: 1px solid #fff5;
-  color: #fff6ea;
-  padding: 13px 22px;
-  border-radius: 50px;
+  background: #fff6ea;
+  color: #3a1408;
+  padding: 14px 24px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition:
+    background-color 0.4s,
+    color 0.4s,
+    transform 0.2s;
+}
+.nav-cta:hover {
+  background: #fff;
+  transform: translateY(-1px);
+}
+/* over the cream booking section the glass turns light and the writing dark */
+.bar[data-tone="light"] .bar-pill {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(36, 18, 11, 0.14);
+  color: #24120b;
+}
+.bar[data-tone="light"] .nav-cta {
+  background: #24120b;
+  color: #fff1da;
 }
 .campaign-hero {
   position: relative;
@@ -276,7 +332,7 @@ em {
   margin: 0;
   font-weight: 400;
 }
-.campaign-title span {
+.campaign-title > span {
   color: #ffcba5;
 }
 .campaign-aside {
@@ -340,6 +396,17 @@ em {
   color: #ffdfba;
 }
 
+/* a word of an animated title: its own mask, with room for the descenders (padding and margin cancel out) */
+.w {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding: 0.12em 0.05em 0.16em 0;
+  margin: -0.12em -0.05em -0.16em 0;
+}
+.w > span {
+  display: inline-block;
+}
 /* ------------------------------------------------------------------ */
 /* 02 · The black strip                                               */
 /* ------------------------------------------------------------------ */
@@ -494,16 +561,22 @@ em {
     gap: 21px;
     padding: 14px 12px 14px 19px;
   }
-  .campaign header {
-    height: 78px;
+  .campaign header.top {
+    height: 84px;
   }
-  .campaign header nav {
+  .bar {
+    inset: 10px 0 auto;
+  }
+  .bar-pill {
+    min-height: 54px;
+    padding: 7px 7px 7px 20px;
+  }
+  .bar-pill nav {
     display: none;
   }
   .nav-cta {
     font-size: 12px;
-    padding: 10px 16px;
-    border-color: #ffd5b477;
+    padding: 11px 16px;
   }
   .campaign-inner {
     min-height: 1090px;
@@ -633,6 +706,7 @@ em {
 @media (max-width: 650px) {
   .campaign {
     position: relative;
+    z-index: 60;
     isolation: isolate;
     background: #f54d06;
     --femme: url(/assets/femme-800.webp);
@@ -684,6 +758,7 @@ em {
 @media (min-width: 651px) {
   .campaign {
     position: relative;
+    z-index: 60; /* above the sections below, so the glass bar keeps floating over them while the page scrolls */
     isolation: isolate;
   }
   .campaign::before {
@@ -1525,6 +1600,69 @@ dialog > p.modal-price {
   }
   .campaign::before {
     animation: dezoom 1.8s var(--spring) both;
+  }
+
+  /* the two big titles of the first screen: the words rise out of their mask one after the other, from a slight blur;
+     in the first title the last words (« sans savoir coder ? ») then catch a passing glint of light, and in the
+     second « SITE WEB. » warms from cream to peach */
+  @keyframes word-in {
+    from {
+      transform: translateY(108%) rotate(4deg);
+      opacity: 0;
+      filter: blur(6px);
+    }
+  }
+  @keyframes glint {
+    from {
+      background-position: 100% 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
+  @keyframes warm {
+    from {
+      color: #fff5e8;
+    }
+  }
+  @keyframes bar-in {
+    from {
+      opacity: 0;
+      translate: 0 -16px;
+    }
+  }
+  .campaign-left > h1,
+  .campaign-title {
+    animation: none;
+  }
+  .campaign .w > span {
+    animation: word-in 0.95s var(--spring) backwards;
+    animation-delay: calc(0.12s + var(--i) * 0.07s);
+    transform-origin: 0 100%;
+  }
+  .campaign-left h1 em .w > span {
+    background-image: linear-gradient(105deg, #fff5e8 0 40%, #ffffff 48%, #ffcf9f 56%, #fff5e8 64% 100%);
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(0 1px 9px rgba(40, 10, 2, 0.3));
+    animation:
+      word-in 0.95s var(--spring) backwards,
+      glint 1.7s ease-in-out backwards;
+    animation-delay: calc(0.12s + var(--i) * 0.07s), calc(1.15s + var(--i) * 0.09s);
+  }
+  .campaign-title span .w > span {
+    animation:
+      word-in 0.95s var(--spring) backwards,
+      warm 1.3s ease backwards;
+    animation-delay: calc(0.12s + var(--i) * 0.07s), calc(1s + var(--i) * 0.1s);
+  }
+  .bar {
+    animation: bar-in 0.8s var(--spring) 0.05s backwards;
   }
 
   /* 02 · the three verbs light up one after the other */
