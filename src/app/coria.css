@@ -627,6 +627,39 @@ em {
     display: none;
   }
 }
+/* A phone (Charifa's choice, 19 October 2026): a real photograph at the bottom of the orange top, faded into the
+   brand's orange so the text above stays on the orange; the computer keeps the mockup's cut-out portrait. Photograph
+   by JEaLiFe Pictures (Unsplash, free licence), resized for phones: only a phone downloads it. The photograph is
+   as wide as the screen and 1.5 times as tall (150vw); the fade starts at its top edge. */
+@media (max-width: 650px) {
+  .campaign {
+    background:
+      linear-gradient(0deg, rgba(245, 77, 6, 0) 52%, rgba(245, 77, 6, 0.75) 80%, #f54d06 100%) center bottom / 100% 150vw no-repeat,
+      url(/assets/fond-telephone-800.webp) center bottom / 100% auto no-repeat,
+      linear-gradient(180deg, #ff5c00 0%, #f54d06 45%) top / 100% 100% no-repeat;
+  }
+  .campaign-portrait,
+  .portrait-note {
+    display: none;
+  }
+  .campaign-title {
+    text-shadow: 0 2px 24px rgba(30, 8, 2, 0.45);
+  }
+}
+/* the narrowest phones: the column on the left is taller, the big line starts lower */
+@media (max-width: 359px) {
+  .campaign-right {
+    top: 640px;
+  }
+}
+@media (max-width: 650px) and (min-resolution: 2.5dppx) {
+  .campaign {
+    background:
+      linear-gradient(0deg, rgba(245, 77, 6, 0) 52%, rgba(245, 77, 6, 0.75) 80%, #f54d06 100%) center bottom / 100% 150vw no-repeat,
+      url(/assets/fond-telephone-1200.webp) center bottom / 100% auto no-repeat,
+      linear-gradient(180deg, #ff5c00 0%, #f54d06 45%) top / 100% 100% no-repeat;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

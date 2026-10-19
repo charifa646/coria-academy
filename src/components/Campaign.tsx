@@ -1,10 +1,18 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import { campaign, nav } from "@/content";
 import { Brand } from "@/components/Brand";
 
 /** The orange campaign at the top: the menu, the promise and the booking on the left, the portrait in the middle
  *  over the word « CRÉATION. », the big line on the right. */
 export function Campaign() {
+  const { props: portrait } = getImageProps({
+    src: "/assets/creative-portrait.webp",
+    alt: campaign.portraitAlt,
+    width: 1024,
+    height: 1536,
+    priority: true,
+    sizes: "(max-width: 1150px) 480px, 600px",
+  });
   return (
     <div className="campaign">
       <header className="wrap">
@@ -72,15 +80,12 @@ export function Campaign() {
           <span className="campaign-word" aria-hidden>
             {campaign.word}
           </span>
-          <Image
-            className="campaign-portrait"
-            src="/assets/creative-portrait.webp"
-            alt={campaign.portraitAlt}
-            width={1024}
-            height={1536}
-            priority
-            sizes="(max-width: 650px) 380px, (max-width: 1150px) 480px, 600px"
-          />
+          {/* the cut-out portrait is for computers and tablets; a phone has its photograph in the background (see
+              coria.css) and gets an empty pixel here, so it never downloads the portrait */}
+          <picture>
+            <source media="(max-width: 650px)" srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+            <img {...portrait} className="campaign-portrait" alt={campaign.portraitAlt} />
+          </picture>
           <span className="portrait-note">{campaign.portraitNote}</span>
         </div>
       </section>
