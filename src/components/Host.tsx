@@ -3,8 +3,8 @@ import { host } from "@/content";
 /** 03 bis · Who runs the masterclass: a few lines from Charifa and the way to see her work. */
 export function Host() {
   return (
-    <section className="host" data-reveal>
-      <div className="wrap host-grid">
+    <section className="host">
+      <div className="wrap host-grid" data-reveal>
         <h2>{host.title}</h2>
         <div>
           <p>{host.text}</p>
