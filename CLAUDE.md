@@ -1,6 +1,6 @@
 # Coria Academy : site de la masterclass Claude Code de Charifa
 
-Projet à part, sans lien avec Ghostdesignco ni les autres sites de Charifa : leurs règles de design (pas d'italique, Clash Display, vert acide) ne s'appliquent pas ici. Branche à part : `coria-academy` (branche vierge du dépôt `sites-pratiques`, elle ne contient que ce site).
+Projet à part, sans lien avec Ghostdesignco ni les autres sites de Charifa : leurs règles de design (pas d'italique, Clash Display, vert acide) ne s'appliquent pas ici. Dépôt à part : `charifa646/coria-academy`, branche `main` (c'est la branche de production du projet Vercel). Une copie de sécurité reste sur la branche `coria-academy` du dépôt `sites-pratiques`.
 
 ## Travailler avec Charifa
 - Réponds en français et tutoie-la. Sur ce site, les textes tutoient le visiteur.
