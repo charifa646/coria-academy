@@ -1,6 +1,7 @@
 import { Campaign } from "@/components/Campaign";
 import { Strip } from "@/components/Strip";
 import { Programme } from "@/components/Programme";
+import { Host } from "@/components/Host";
 import { Reservation } from "@/components/Reservation";
 import { Footer } from "@/components/Footer";
 import { Motion } from "@/components/Motion";
@@ -16,6 +17,7 @@ export default function Home() {
       <Strip />
       <main>
         <Programme />
+        <Host />
         <Reservation />
       </main>
       <Footer />

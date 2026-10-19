@@ -84,6 +84,16 @@ Carte 3
 
 Bas de section, lien : Réserver ma place ↓
 
+## 03 bis · Présentation (ajoutée avec Charifa le 19 octobre 2026)
+
+Titre : Qui anime la masterclass
+
+Texte : Je suis Charifa, fondatrice de Ghostdesignco, une agence qui crée des sites web sur mesure pour les entrepreneurs francophones : sites vitrines, landing pages, pages de vente. Claude Code fait partie de ma façon de travailler au quotidien. Pendant cette masterclass, je te montre comment je m’en sers, de la maquette au site en ligne.
+
+Lien : Voir mon travail sur ghostdesignco.com (vers https://www.ghostdesignco.com)
+
+À venir de Charifa : une vraie photo d'elle, à placer à côté du texte.
+
 ## 04 · Réservation
 
 Mot de fond : créer.

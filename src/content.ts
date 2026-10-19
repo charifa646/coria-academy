@@ -67,6 +67,13 @@ export const programme = {
   link: "Réserver ma place",
 };
 
+export const host = {
+  title: "Qui anime la masterclass",
+  text: "Je suis Charifa, fondatrice de Ghostdesignco, une agence qui crée des sites web sur mesure pour les entrepreneurs francophones : sites vitrines, landing pages, pages de vente. Claude Code fait partie de ma façon de travailler au quotidien. Pendant cette masterclass, je te montre comment je m’en sers, de la maquette au site en ligne.",
+  link: "Voir mon travail sur ghostdesignco.com",
+  href: "https://www.ghostdesignco.com",
+};
+
 export const reservation = {
   word: "créer.",
   title: "Tu as les idées.",
