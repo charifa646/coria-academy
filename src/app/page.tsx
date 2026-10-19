@@ -3,6 +3,7 @@ import { Strip } from "@/components/Strip";
 import { Programme } from "@/components/Programme";
 import { Reservation } from "@/components/Reservation";
 import { Footer } from "@/components/Footer";
+import { Motion } from "@/components/Motion";
 import { skip } from "@/content";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Reservation />
       </main>
       <Footer />
+      <Motion />
     </>
   );
 }

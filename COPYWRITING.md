@@ -4,7 +4,7 @@ Source : la maquette GPT Astra de Charifa (V3, octobre 2026), recopiée mot pour
 
 **Règle : ce fichier est la seule source des textes du site.** Ils se recopient mot pour mot : pas de paraphrase, rien de raccourci, rien d'ajouté. S'il manque un texte, on le demande à Charifa, on ne l'invente pas. Les textes tutoient le visiteur.
 
-Faits fixes : dimanche 25 octobre 2026, en ligne, en direct. Pass : 5 000 FCFA. À venir de Charifa : l'horaire, la plateforme du live (et le replay s'il y en a un), sa présentation. Aucun horaire, aucun lien de paiement inventé (le lien du formulaire de réservation viendra de Charifa).
+Faits fixes : dimanche 25 octobre 2026 à 19h30, heure du Burkina, en direct sur Zoom. Pass : 5 000 FCFA. À venir de Charifa : le replay (s'il y en a un), sa présentation. Aucun lien de paiement inventé (le lien du formulaire de réservation viendra de Charifa).
 
 ---
 
@@ -12,7 +12,7 @@ Faits fixes : dimanche 25 octobre 2026, en ligne, en direct. Pass : 5 000 FCFA. 
 
 Titre : Crée ce que tu imagines · Masterclass Claude Code
 
-Description : Masterclass live Claude Code avec Charifa. De la maquette au site web professionnel. Dimanche 25 octobre 2026 en ligne. Pass : 5 000 FCFA.
+Description : Masterclass live Claude Code avec Charifa. De la maquette au site web professionnel. Dimanche 25 octobre 2026 à 19h30 (heure du Burkina), en direct sur Zoom. Pass : 5 000 FCFA.
 
 ## Menu
 
@@ -34,7 +34,7 @@ Bouton : Je réserve ma place ↗
 
 Carte pass : PASS MASTERCLASS · 5 000 FCFA
 
-Carte date : LE RENDEZ-VOUS · 25 octobre · Dimanche · 2026 · En ligne · En direct
+Carte date : LE RENDEZ-VOUS · 25 octobre · Dimanche · 19h30 · En direct sur Zoom
 
 Grande accroche : DU DESIGN AU SITE WEB.
 
@@ -92,7 +92,7 @@ Titre : Tu as les idées. Découvre comment leur donner vie.
 
 Texte : Une démonstration concrète. Un vrai site créé sous tes yeux.
 
-Panneau : LE RENDEZ-VOUS · Dimanche 25 octobre 2026 · En ligne · En direct · PASS MASTERCLASS · 5 000 FCFA
+Panneau : LE RENDEZ-VOUS · Dimanche 25 octobre 2026 · 19h30, heure du Burkina · En direct sur Zoom · PASS MASTERCLASS · 5 000 FCFA
 
 Bouton : Je réserve ma place ↗
 
@@ -110,7 +110,7 @@ Signature : Apprends · Applique · Crée
 
 Titre : Ta prochaine création commence ici.
 
-Texte : Dimanche 25 octobre 2026 · En ligne · En direct
+Texte : Dimanche 25 octobre 2026 · 19h30, heure du Burkina · En direct sur Zoom
 
 Prix : 5 000 FCFA
 

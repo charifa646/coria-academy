@@ -18,7 +18,7 @@ const gelasio = Gelasio({
 export const metadata: Metadata = {
   title: "Crée ce que tu imagines · Masterclass Claude Code",
   description:
-    "Masterclass live Claude Code avec Charifa. De la maquette au site web professionnel. Dimanche 25 octobre 2026 en ligne. Pass : 5 000 FCFA.",
+    "Masterclass live Claude Code avec Charifa. De la maquette au site web professionnel. Dimanche 25 octobre 2026 à 19h30 (heure du Burkina), en direct sur Zoom. Pass : 5 000 FCFA.",
   // closed to search engines until Charifa says « publie »
   robots: { index: false, follow: false },
 };
@@ -27,7 +27,16 @@ export const viewport: Viewport = { themeColor: "#f34c07" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${arimo.variable} ${gelasio.variable}`}>
+    // suppressHydrationWarning: the script below adds a class to <html> before React starts
+    <html lang="fr" className={`${arimo.variable} ${gelasio.variable}`} suppressHydrationWarning>
+      <head>
+        {/* the blocks that appear on scroll start hidden only when motion is welcome and this script ran */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if(window.matchMedia("(prefers-reduced-motion: no-preference)").matches)document.documentElement.classList.add("anim")`,
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

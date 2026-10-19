@@ -20,7 +20,7 @@ export function Programme() {
         </div>
 
         <div className="learning-grid">
-          <article className="learning learning-design">
+          <article className="learning learning-design" data-reveal style={{ "--i": 0 } as React.CSSProperties}>
             <div className="lesson-art" aria-hidden>
               <div className="wireframe">
                 <div className="wire-nav" />
@@ -43,14 +43,14 @@ export function Programme() {
             <Lesson {...design} />
           </article>
 
-          <article className="learning learning-code">
+          <article className="learning learning-code" data-reveal style={{ "--i": 1 } as React.CSSProperties}>
             <div className="lesson-art" aria-hidden>
               <div className="editor">
                 <div className="editor-header">
                   <span>{code.head}</span>
                   <span>↗</span>
                 </div>
-                <p className="prompt">
+                <p className="prompt" style={{ "--l": 0 } as React.CSSProperties}>
                   {code.prompt[0]}
                   <br />
                   {code.prompt[1]}
@@ -58,16 +58,16 @@ export function Programme() {
                   {code.prompt[2]}
                 </p>
                 <div className="code-lines">
-                  <span>
+                  <span style={{ "--l": 1 } as React.CSSProperties}>
                     &lt;section <i>class=&quot;hero&quot;</i>&gt;
                   </span>
-                  <span>&nbsp;&nbsp;&lt;h1&gt;Une idée prend vie.&lt;/h1&gt;</span>
-                  <span>&nbsp;&nbsp;&lt;style&gt;</span>
-                  <span>
+                  <span style={{ "--l": 2 } as React.CSSProperties}>&nbsp;&nbsp;&lt;h1&gt;Une idée prend vie.&lt;/h1&gt;</span>
+                  <span style={{ "--l": 3 } as React.CSSProperties}>&nbsp;&nbsp;&lt;style&gt;</span>
+                  <span style={{ "--l": 4 } as React.CSSProperties}>
                     &nbsp;&nbsp;&nbsp;&nbsp;design: <i>sur mesure</i>;
                   </span>
-                  <span>&nbsp;&nbsp;&lt;/style&gt;</span>
-                  <span>&lt;/section&gt;</span>
+                  <span style={{ "--l": 5 } as React.CSSProperties}>&nbsp;&nbsp;&lt;/style&gt;</span>
+                  <span style={{ "--l": 6 } as React.CSSProperties}>&lt;/section&gt;</span>
                 </div>
                 <span className="editor-bottom">{code.foot}</span>
               </div>
@@ -75,7 +75,7 @@ export function Programme() {
             <Lesson {...code} />
           </article>
 
-          <article className="learning learning-future">
+          <article className="learning learning-future" data-reveal style={{ "--i": 2 } as React.CSSProperties}>
             <div className="lesson-art future-art" aria-hidden>
               <Image src="/assets/motion.webp" alt="" fill sizes="(max-width: 650px) 100vw, 430px" />
               <div className="portfolio-label">

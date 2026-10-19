@@ -12,7 +12,7 @@ Projet à part, sans lien avec Ghostdesignco ni les autres sites de Charifa : le
 - Une page : haut orange avec portrait central et mot « CRÉATION. », bande noire, programme en trois cartes décalées (crème, orange, noire), réservation sur fond crème à panneau noir avec le bouton orange (choix B du 19 octobre 2026), pied de page noir. L'orange reste au haut de page, à la carte Claude Code et aux boutons de réservation.
 - Typographie de la maquette : Arial pour le texte, Georgia pour la marque et les italiques des cartes.
 - Le portrait est un visuel de campagne généré : il ne représente pas Charifa.
-- Prix : 5 000 FCFA partout. Date : dimanche 25 octobre 2026, en ligne, en direct.
+- Prix : 5 000 FCFA partout. Date : dimanche 25 octobre 2026, 19h30 heure du Burkina, en direct sur Zoom.
 - Réservation : le lien du formulaire de Charifa (à venir) remplacera la fenêtre « pas encore ouverte ».
 
 ## Code
