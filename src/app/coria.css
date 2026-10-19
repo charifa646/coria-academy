@@ -1054,6 +1054,17 @@ em {
   overflow: hidden;
   isolation: isolate;
 }
+.reservation::before {
+  /* the only wave of the page: the black of the presentation flows down into the cream, softly */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: clamp(36px, 5vw, 72px);
+  z-index: -1;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1440V30C1200 66 960 70 720 40S240 4 0 44Z' fill='%230e0e0c'/%3E%3C/svg%3E") center top / 100% 100% no-repeat;
+}
 .reservation-backdrop {
   position: absolute;
   left: 0;
