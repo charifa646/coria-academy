@@ -1,0 +1,637 @@
+/* Coria Academy, masterclass Claude Code. Ported from Charifa's mockup (maquette/styles.css, V3 « campagne
+   orange »): the V2 base rules and the V3 rules that override them are merged here, the measures kept as they are. */
+
+:root {
+  --paper: #0e0e0c;
+  --ink: #f5f0e7;
+  --muted: #9a978d;
+  --accent: #fa5a16;
+  --line: #34332d;
+  --width: 1320px;
+  --gutter: clamp(22px, 5vw, 80px);
+  /* the mockup's fonts; their free twins with the same measures where they are missing */
+  --sans: Arial, var(--font-arimo), Helvetica, sans-serif;
+  --serif: Georgia, var(--font-gelasio), "Times New Roman", serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 25px;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+.skip {
+  position: fixed;
+  top: -80px;
+  left: 20px;
+  background: white;
+  color: #24120b;
+  padding: 15px;
+  z-index: 20;
+}
+.skip:focus {
+  top: 10px;
+}
+.wrap {
+  width: min(var(--width), calc(100% - 2 * var(--gutter)));
+  margin-inline: auto;
+}
+em {
+  font-family: var(--sans);
+  font-style: normal;
+  letter-spacing: inherit;
+}
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--accent);
+  margin: 0 0 23px;
+}
+.brand {
+  font-family: var(--serif);
+  font-size: 29px;
+  letter-spacing: -1.6px;
+  line-height: 1;
+}
+.brand > span {
+  display: block;
+  font-family: var(--sans);
+  font-size: 6px;
+  letter-spacing: 3.4px;
+  margin-top: 7px;
+  padding-left: 3px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 11px;
+  padding: 15px 16px 15px 23px;
+  min-height: 53px;
+  border: 0;
+  border-radius: 50px;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.button > span {
+  display: grid;
+  place-items: center;
+  background: #ffffff18;
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  font-size: 20px;
+  margin: -5px 0;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------------------ */
+/* 01 · The orange campaign                                           */
+/* ------------------------------------------------------------------ */
+.campaign {
+  background:
+    radial-gradient(ellipse at 19% 53%, #ff8a0a 0, transparent 57%),
+    linear-gradient(115deg, #ff5900 15%, #f24406 65%, #a91108 100%);
+  color: #fff5e8;
+  overflow: hidden;
+}
+.campaign header {
+  position: relative;
+  z-index: 6;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.campaign header .brand {
+  color: #fff6ea;
+}
+.campaign header nav {
+  display: flex;
+  gap: 33px;
+  font-size: 10px;
+}
+.nav-cta {
+  font-size: 10px;
+  border: 1px solid #fff5;
+  color: #fff6ea;
+  padding: 12px 17px;
+  border-radius: 50px;
+}
+.nav-cta span {
+  padding-left: 20px;
+}
+.campaign-hero {
+  position: relative;
+}
+.campaign-inner {
+  position: relative;
+  min-height: 790px;
+  isolation: isolate;
+}
+.campaign-left {
+  position: relative;
+  width: 310px;
+  padding-top: 76px;
+  z-index: 4;
+}
+.campaign-left .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.2px;
+  color: #ffe3c7;
+  margin-bottom: 25px;
+}
+.campaign-left h1 {
+  font-size: 35px;
+  line-height: 1.04;
+  letter-spacing: -1.8px;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+.campaign-left h1 em {
+  color: #fff5e8;
+}
+.campaign-description {
+  font-size: 11px;
+  line-height: 1.7;
+  max-width: 265px;
+  color: #ffe6ce;
+  margin: 0 0 28px;
+}
+.campaign-button {
+  background: #941b0b;
+  color: #fff4e5;
+  font-size: 10px;
+  min-height: 49px;
+  padding: 14px 17px 14px 23px;
+}
+.campaign-button:hover {
+  background: #671205;
+}
+.session-cards {
+  display: flex;
+  gap: 12px;
+  margin-top: 47px;
+}
+.pass-card,
+.date-card {
+  border-radius: 13px;
+  padding: 19px 15px;
+  min-height: 154px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pass-card {
+  background: #fff6e9;
+  color: #421e13;
+  width: 148px;
+  box-shadow: 0 12px 30px #b5351615;
+}
+.date-card {
+  border: 1px solid #ffd4ae66;
+  background: #f76c0722;
+  flex: 1;
+  min-width: 140px;
+}
+.pass-card > span,
+.date-card > span {
+  font-size: 6px;
+  letter-spacing: 0.6px;
+  line-height: 1.7;
+}
+.pass-card strong {
+  font-size: 35px;
+  letter-spacing: -2px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.pass-card small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.7px;
+  margin-top: 5px;
+}
+.date-card strong {
+  font-size: 21px;
+  letter-spacing: -1px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.date-card > span:last-child {
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.campaign-right {
+  position: absolute;
+  right: 0;
+  top: 74px;
+  width: 365px;
+  z-index: 3;
+  text-align: right;
+}
+.campaign-title {
+  font-size: 64px;
+  letter-spacing: -4.5px;
+  line-height: 1.02;
+  margin: 0;
+  font-weight: 400;
+}
+.campaign-title span {
+  color: #ffcba5;
+}
+.campaign-aside {
+  margin: 40px 0 0 auto;
+  width: 245px;
+  text-align: left;
+}
+.campaign-aside > p:first-child {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ffe8d5;
+}
+.campaign-aside > a {
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffcca977;
+  padding: 19px 0 16px;
+}
+.beginner-note {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #ffe2c5;
+  margin-top: 25px;
+  border: 1px solid #ffc89f55;
+  padding: 20px;
+  border-radius: 12px;
+}
+.campaign-word {
+  position: absolute;
+  left: 50%;
+  bottom: -19px;
+  transform: translateX(-50%);
+  font-size: clamp(140px, 17.5vw, 260px);
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+  font-weight: 400;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+  color: #fff4e3;
+  pointer-events: none;
+}
+.campaign-portrait {
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  width: 570px;
+  height: 800px;
+  object-fit: contain;
+  object-position: center bottom;
+  z-index: 2;
+  pointer-events: none;
+}
+.portrait-note {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  z-index: 5;
+  font-size: 5px;
+  letter-spacing: 1.2px;
+  color: #ffdfba;
+}
+
+/* ------------------------------------------------------------------ */
+/* 02 · The black strip                                               */
+/* ------------------------------------------------------------------ */
+.campaign-strip {
+  background: #0e0e0c;
+  border-bottom: 1px solid #292821;
+}
+.campaign-strip > .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 102px;
+}
+.campaign-strip > .wrap > span {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: #928d80;
+}
+.campaign-strip > .wrap > div {
+  display: flex;
+  gap: 9px;
+}
+.campaign-strip > .wrap > div > span {
+  border: 1px solid #49463b;
+  border-radius: 50px;
+  padding: 10px 17px;
+  font-size: 9px;
+  color: #d4cebf;
+}
+.campaign-strip a {
+  font-size: 9px;
+  color: #a49c88;
+}
+
+/* ------------------------------------------------------------------ */
+/* Screens                                                            */
+/* ------------------------------------------------------------------ */
+@media (min-width: 1650px) {
+  .campaign-inner {
+    min-height: 850px;
+  }
+  .campaign-portrait {
+    height: 855px;
+    width: 600px;
+  }
+  .campaign-left {
+    padding-top: 95px;
+  }
+  .campaign-right {
+    top: 95px;
+  }
+  .campaign-title {
+    font-size: 70px;
+  }
+}
+@media (max-width: 1150px) {
+  .campaign-left {
+    width: 255px;
+    padding-top: 65px;
+  }
+  .campaign-left h1 {
+    font-size: 30px;
+  }
+  .campaign-right {
+    width: 285px;
+    top: 65px;
+  }
+  .campaign-title {
+    font-size: 53px;
+    letter-spacing: -3px;
+  }
+  .campaign-aside {
+    width: 210px;
+  }
+  .campaign-portrait {
+    width: 480px;
+    height: 720px;
+  }
+  .campaign-inner {
+    min-height: 740px;
+  }
+  .session-cards {
+    gap: 8px;
+    margin-top: 32px;
+  }
+  .pass-card,
+  .date-card {
+    padding: 16px 11px;
+    min-width: 0;
+    min-height: 140px;
+  }
+  .pass-card {
+    width: 126px;
+  }
+  .pass-card strong {
+    font-size: 29px;
+  }
+  .date-card strong {
+    font-size: 18px;
+  }
+  .campaign-word {
+    bottom: 0;
+    font-size: 18vw;
+  }
+}
+@media (max-width: 850px) and (min-width: 651px) {
+  .campaign-inner {
+    min-height: 820px;
+  }
+  .campaign-portrait {
+    width: 420px;
+    height: 630px;
+    left: 55%;
+  }
+  .campaign-left {
+    width: 250px;
+  }
+  .campaign-right {
+    width: 260px;
+    top: 60px;
+  }
+  .campaign-title {
+    font-size: 46px;
+  }
+  .campaign-aside {
+    width: 170px;
+    margin-top: 23px;
+  }
+  .campaign-aside > p:first-child {
+    font-size: 11px;
+  }
+  .beginner-note {
+    padding: 13px;
+    font-size: 9px;
+  }
+  .campaign-strip > .wrap > span {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .brand {
+    font-size: 26px;
+  }
+  .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .button {
+    font-size: 10px;
+    gap: 21px;
+    padding: 14px 12px 14px 19px;
+  }
+  .campaign header {
+    height: 78px;
+  }
+  .campaign header nav {
+    display: none;
+  }
+  .nav-cta {
+    font-size: 9px;
+    padding: 10px 13px;
+    border-color: #ffd5b477;
+  }
+  .nav-cta span {
+    padding-left: 12px;
+  }
+  .campaign-inner {
+    min-height: 1090px;
+  }
+  .campaign-left {
+    padding-top: 28px;
+    width: 100%;
+    max-width: 370px;
+  }
+  .campaign-left .eyebrow {
+    font-size: 7px;
+    margin-bottom: 20px;
+  }
+  .campaign-left h1 {
+    font-size: 37px;
+    line-height: 1.04;
+    letter-spacing: -1.9px;
+    max-width: 340px;
+    margin-bottom: 18px;
+  }
+  .campaign-description {
+    font-size: 12px;
+    line-height: 1.65;
+    max-width: 315px;
+    margin-bottom: 23px;
+  }
+  .campaign-button {
+    min-height: 49px;
+    font-size: 11px;
+  }
+  .session-cards {
+    margin-top: 27px;
+    gap: 12px;
+    max-width: 330px;
+  }
+  .pass-card,
+  .date-card {
+    min-height: 115px;
+    padding: 14px 15px;
+    border-radius: 10px;
+  }
+  .pass-card {
+    width: 150px;
+  }
+  .pass-card strong {
+    font-size: 29px;
+  }
+  .pass-card small {
+    display: inline;
+    font-size: 8px;
+    letter-spacing: 0;
+    margin-left: 5px;
+  }
+  .pass-card > span,
+  .date-card > span {
+    font-size: 6px;
+  }
+  .date-card strong {
+    font-size: 22px;
+  }
+  .date-card > span:last-child {
+    font-size: 7px;
+  }
+  .campaign-right {
+    top: 560px;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .campaign-title {
+    font-size: 43px;
+    letter-spacing: -3px;
+    line-height: 1.02;
+    max-width: 310px;
+    margin-left: auto;
+    text-shadow: 0 2px 20px #3d0c0730;
+  }
+  .campaign-aside {
+    display: none;
+  }
+  .campaign-portrait {
+    height: 565px;
+    width: 377px;
+    max-width: none;
+    left: 39%;
+    bottom: 0;
+    z-index: 2;
+  }
+  .campaign-word {
+    font-size: 21vw;
+    bottom: 15px;
+    letter-spacing: -0.08em;
+    z-index: 1;
+  }
+  .portrait-note {
+    font-size: 4px;
+    bottom: 9px;
+    letter-spacing: 0.8px;
+  }
+  .campaign-strip > .wrap {
+    min-height: 110px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13px;
+    padding-block: 21px;
+  }
+  .campaign-strip > .wrap > span {
+    font-size: 6px;
+    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+  }
+  .campaign-strip > .wrap > div {
+    gap: 7px;
+  }
+  .campaign-strip > .wrap > div > span {
+    font-size: 8px;
+    padding: 8px 13px;
+  }
+  .campaign-strip a {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
