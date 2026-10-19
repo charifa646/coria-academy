@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { programme } from "@/content";
 
-/** 03 · The programme: the intro on two columns, then three offset cards (cream, orange, black). The drawings on
+/** 03 · The programme: the title and its line, then three offset cards (cream, orange, black). The drawings on
  *  the cards are HTML and CSS, as in the mockup; the two photographs are the mockup's original visuals. */
 export function Programme() {
   const { design, code, future } = programme;
@@ -9,7 +9,6 @@ export function Programme() {
     <section className="programme" id="programme">
       <div className="wrap">
         <div className="programme-intro">
-          <p className="eyebrow">{programme.eyebrow}</p>
           <div>
             <h2>
               {programme.title[0]}
@@ -95,11 +94,6 @@ export function Programme() {
         </div>
 
         <div className="programme-bottom">
-          <p>
-            {programme.note[0]}
-            <br />
-            {programme.note[1]}
-          </p>
           <a className="underlined" href="#reservation">
             {programme.link} <span aria-hidden>↓</span>
           </a>

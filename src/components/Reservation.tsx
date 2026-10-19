@@ -1,7 +1,7 @@
 import { reservation } from "@/content";
 import { Reserve } from "@/components/Reserve";
 
-/** 04 · The booking: the big line on the orange on the left, the cream panel with the date, the pass and the
+/** 04 · The booking: the big line on the cream on the left, the black panel with the date, the pass and the
  *  button on the right, the word « créer. » in the background. */
 export function Reservation() {
   return (
@@ -11,7 +11,6 @@ export function Reservation() {
       </div>
       <div className="wrap reservation-grid">
         <div className="reservation-copy">
-          <p className="eyebrow">{reservation.eyebrow}</p>
           <h2>
             {reservation.title}
             <br />

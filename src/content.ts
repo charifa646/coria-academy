@@ -18,7 +18,7 @@ export const campaign = {
   titleEnd: "sans savoir coder ?",
   text: "Découvre en direct comment je transforme une simple maquette en un site web moderne, responsive et professionnel grâce à Claude Code.",
   cta: "Je réserve ma place",
-  pass: { label: "PASS MASTERCLASS", price: "5 000", currency: "FCFA", note: "UNE NOUVELLE POSSIBILITÉ." },
+  pass: { label: "PASS MASTERCLASS", price: "5 000", currency: "FCFA" },
   date: { label: "LE RENDEZ-VOUS", day: "25 octobre", line1: "Dimanche · 2026", line2: "En ligne · En direct" },
   big: ["DU DESIGN", "AU", "SITE WEB."],
   aside: ["Une démonstration concrète.", "Un vrai site créé sous tes yeux."],
@@ -36,9 +36,8 @@ export const strip = {
 };
 
 export const programme = {
-  eyebrow: "PENDANT LA MASTERCLASS",
-  title: ["DE LA PREMIÈRE IDÉE", "À DE NOUVELLES", "POSSIBILITÉS."],
-  text: "Une démonstration concrète. De la première maquette au site qui prend vie, découvre ce qui fait la différence.",
+  title: ["CE QUE TU VAS VOIR", "PENDANT LA", "MASTERCLASS."],
+  text: "De la première maquette au site qui prend vie, découvre ce qui fait la différence.",
   design: {
     wire: "LA MAQUETTE",
     name: "ORA",
@@ -57,7 +56,7 @@ export const programme = {
     text: "Comment utiliser Claude Code pour créer un design professionnel.",
   },
   future: {
-    label: ["VOTRE PROCHAIN", "projet."],
+    label: ["TON PROCHAIN", "projet."],
     slip: "DU SAVOIR-FAIRE À L’OFFRE",
     slipTitle: "Design & développement",
     slipList: "Site vitrine · Landing page · E-commerce",
@@ -65,13 +64,11 @@ export const programme = {
     title: ["Une compétence.", "Un nouvel horizon."],
     text: "Comment transformer cette compétence en opportunité de revenus.",
   },
-  note: ["Aucune expérience en programmation", "requise pour assister à la session."],
-  link: "Ça commence avec toi",
+  link: "Réserver ma place",
 };
 
 export const reservation = {
   word: "créer.",
-  eyebrow: "MASTERCLASS LIVE · CLAUDE CODE",
   title: "Tu as les idées.",
   titleEnd: ["Découvre comment", "leur donner vie."],
   text: ["Une démonstration concrète.", "Un vrai site créé sous tes yeux."],
@@ -81,12 +78,11 @@ export const reservation = {
   note: "Aucune expérience en programmation requise.",
 };
 
-export const footer = { text: "Une masterclass avec Charifa.", motto: "Apprends · Applique · Encaisse" };
+export const footer = { text: "Une masterclass avec Charifa.", motto: "Apprends · Applique · Crée" };
 
 // The booking window, shown while Charifa's booking form link is not set (RESERVATION_URL in Reserve.tsx).
 export const booking = {
   close: "Fermer",
-  eyebrow: "MASTERCLASS · CLAUDE CODE",
   title: "Ta prochaine",
   titleEnd: "création commence ici.",
   text: "Dimanche 25 octobre 2026 · En ligne · En direct",

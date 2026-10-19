@@ -1,16 +1,16 @@
 # Coria Academy, masterclass Claude Code : les textes
 
-Source : la maquette GPT Astra de Charifa (V3, octobre 2026), recopiée mot pour mot depuis `maquette/index.html`.
+Source : la maquette GPT Astra de Charifa (V3, octobre 2026), recopiée mot pour mot depuis `maquette/index.html`, puis revue avec Charifa le 19 octobre 2026 : répétitions retirées, étiquettes de section retirées sauf celle du haut, tutoiement partout, plus de promesse de gains dans la signature.
 
 **Règle : ce fichier est la seule source des textes du site.** Ils se recopient mot pour mot : pas de paraphrase, rien de raccourci, rien d'ajouté. S'il manque un texte, on le demande à Charifa, on ne l'invente pas. Les textes tutoient le visiteur.
 
-Faits fixes : dimanche 25 octobre 2026, en ligne, en direct. Pass : 5 000 FCFA. Aucun horaire, aucun lien de paiement inventé (le lien du formulaire de réservation viendra de Charifa).
+Faits fixes : dimanche 25 octobre 2026, en ligne, en direct. Pass : 5 000 FCFA. À venir de Charifa : l'horaire, la plateforme du live (et le replay s'il y en a un), sa présentation. Aucun horaire, aucun lien de paiement inventé (le lien du formulaire de réservation viendra de Charifa).
 
 ---
 
 ## Onglet et moteurs de recherche
 
-Titre : Crée ce que tu imagines — Masterclass Claude Code
+Titre : Crée ce que tu imagines · Masterclass Claude Code
 
 Description : Masterclass live Claude Code avec Charifa. De la maquette au site web professionnel. Dimanche 25 octobre 2026 en ligne. Pass : 5 000 FCFA.
 
@@ -32,7 +32,7 @@ Texte : Découvre en direct comment je transforme une simple maquette en un site
 
 Bouton : Je réserve ma place ↗
 
-Carte pass : PASS MASTERCLASS · 5 000 FCFA · UNE NOUVELLE POSSIBILITÉ.
+Carte pass : PASS MASTERCLASS · 5 000 FCFA
 
 Carte date : LE RENDEZ-VOUS · 25 octobre · Dimanche · 2026 · En ligne · En direct
 
@@ -60,11 +60,9 @@ Lien : La suite commence ici ↓
 
 ## 03 · Programme
 
-Étiquette : PENDANT LA MASTERCLASS
+Titre : CE QUE TU VAS VOIR PENDANT LA MASTERCLASS.
 
-Titre : DE LA PREMIÈRE IDÉE À DE NOUVELLES POSSIBILITÉS.
-
-Texte : Une démonstration concrète. De la première maquette au site qui prend vie, découvre ce qui fait la différence.
+Texte : De la première maquette au site qui prend vie, découvre ce qui fait la différence.
 
 Carte 1
 - Illustration : LA MAQUETTE · ORA · L’art de ralentir. · LE SITE PREND VIE ↗
@@ -79,18 +77,16 @@ Carte 2
 - Texte : Comment utiliser Claude Code pour créer un design professionnel.
 
 Carte 3
-- Illustration : VOTRE PROCHAIN projet. · DU SAVOIR-FAIRE À L’OFFRE · Design & développement · Site vitrine · Landing page · E-commerce
+- Illustration : TON PROCHAIN projet. · DU SAVOIR-FAIRE À L’OFFRE · Design & développement · Site vitrine · Landing page · E-commerce
 - Catégorie : OUVRIR LE CHAMP DES POSSIBLES
 - Titre : Une compétence. Un nouvel horizon.
 - Texte : Comment transformer cette compétence en opportunité de revenus.
 
-Bas de section : Aucune expérience en programmation requise pour assister à la session. · Lien : Ça commence avec toi ↓
+Bas de section, lien : Réserver ma place ↓
 
 ## 04 · Réservation
 
 Mot de fond : créer.
-
-Étiquette : MASTERCLASS LIVE · CLAUDE CODE
 
 Titre : Tu as les idées. Découvre comment leur donner vie.
 
@@ -108,11 +104,9 @@ Marque : Coria · ACADEMY
 
 Texte : Une masterclass avec Charifa.
 
-Signature : Apprends · Applique · Encaisse
+Signature : Apprends · Applique · Crée
 
 ## Fenêtre de réservation (tant que le lien n'est pas fourni)
-
-Étiquette : MASTERCLASS · CLAUDE CODE
 
 Titre : Ta prochaine création commence ici.
 

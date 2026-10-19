@@ -15,7 +15,7 @@ export function Reserve() {
   return (
     <>
       <button
-        className="button cream"
+        className="button book"
         type="button"
         onClick={() => (RESERVATION_URL ? window.location.assign(RESERVATION_URL) : dialog.current?.showModal())}
       >
@@ -33,7 +33,6 @@ export function Reserve() {
         <button className="close" type="button" aria-label={booking.close} onClick={close}>
           ×
         </button>
-        <p className="eyebrow">{booking.eyebrow}</p>
         <h2 id="booking-title">
           {booking.title}
           <br />

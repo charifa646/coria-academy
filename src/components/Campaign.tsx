@@ -46,7 +46,6 @@ export function Campaign() {
                   {campaign.pass.price}
                   <small>{campaign.pass.currency}</small>
                 </strong>
-                <span>{campaign.pass.note}</span>
               </div>
               <div className="date-card">
                 <span>{campaign.date.label}</span>

@@ -16,7 +16,7 @@ const gelasio = Gelasio({
 });
 
 export const metadata: Metadata = {
-  title: "Crée ce que tu imagines — Masterclass Claude Code",
+  title: "Crée ce que tu imagines · Masterclass Claude Code",
   description:
     "Masterclass live Claude Code avec Charifa. De la maquette au site web professionnel. Dimanche 25 octobre 2026 en ligne. Pass : 5 000 FCFA.",
   // closed to search engines until Charifa says « publie »

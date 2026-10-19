@@ -684,13 +684,7 @@ em {
   padding: 130px 0 110px;
 }
 .programme-intro {
-  display: grid;
-  grid-template-columns: 1fr 2.2fr;
-  gap: 50px;
   margin-bottom: 72px;
-}
-.programme-intro > .eyebrow {
-  padding-top: 14px;
 }
 .programme-intro h2 {
   font-size: var(--t-title);
@@ -962,15 +956,10 @@ em {
 }
 .programme-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 30px;
   margin-top: 64px;
-}
-.programme-bottom > p {
-  font-size: var(--t-small);
-  line-height: 1.7;
-  color: #9f9685;
 }
 .underlined {
   font-size: 14px;
@@ -985,11 +974,11 @@ em {
 }
 
 /* ------------------------------------------------------------------ */
-/* 04 · The booking: orange, with a cream panel                       */
+/* 04 · The booking: cream, with a black panel and the orange button */
 /* ------------------------------------------------------------------ */
 .reservation {
   position: relative;
-  background: #f25716;
+  background: #f2ecdf;
   color: #24120b;
   padding: 130px 0;
   overflow: hidden;
@@ -1001,7 +990,7 @@ em {
   bottom: -100px;
   font: italic 420px/1 var(--serif);
   letter-spacing: -35px;
-  color: #7c1f0710;
+  color: #2f281e0b;
   z-index: -1;
   pointer-events: none;
   white-space: nowrap;
@@ -1012,9 +1001,6 @@ em {
   gap: 10%;
   align-items: center;
 }
-.reservation .eyebrow {
-  color: #5e2311;
-}
 .reservation-copy h2 {
   font-size: var(--t-title);
   font-weight: 400;
@@ -1023,25 +1009,24 @@ em {
   margin: 0 0 28px;
 }
 .reservation-copy h2 em {
-  color: #fff2dc;
+  color: #e64c16;
 }
 .reservation-copy > p:last-child {
   font-size: var(--t-body);
   line-height: 1.7;
-  color: #612512;
+  color: #6b5f52;
 }
 .reservation-details {
-  background: #fff2dd;
+  background: #0e0e0c;
   border-radius: 14px;
   padding: 40px;
-  color: #36180d;
-  box-shadow: 0 20px 45px #9b260d22;
+  color: #f3ecdd;
 }
 .session-date > span,
 .reservation-price > span {
   font-size: 10px;
   letter-spacing: 0.16em;
-  color: #98715a;
+  color: #9a9182;
 }
 .session-date strong {
   display: block;
@@ -1053,11 +1038,11 @@ em {
 }
 .session-date > p {
   font-size: var(--t-small);
-  color: #82583f;
+  color: #b5ab9a;
   margin-top: 12px;
 }
 .reservation-price {
-  border-top: 1px solid #e2cab3;
+  border-top: 1px solid #2f2c25;
   margin-top: 25px;
   padding-top: 23px;
 }
@@ -1070,23 +1055,23 @@ em {
 .reservation-price small {
   font-size: 15px;
   letter-spacing: 0;
-  color: #79523b;
+  color: #b5ab9a;
 }
-.cream {
-  background: #33160c;
-  color: #fff1da;
+.book {
+  background: #f25716;
+  color: #fff;
   width: 100%;
 }
-.cream > span {
-  background: #ffffff15;
+.book > span {
+  background: #ffffff26;
 }
-.cream:hover {
-  background: #612612;
+.book:hover {
+  background: #d9470c;
 }
 .reservation-note {
   font-size: 12px;
   line-height: 1.6;
-  color: #8f6e58;
+  color: #8f8777;
   text-align: center;
   margin-top: 16px;
 }
@@ -1122,9 +1107,6 @@ dialog::backdrop {
   background: #28231999;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-}
-dialog .eyebrow {
-  color: #b34720;
 }
 dialog h2 {
   font-size: clamp(30px, 3vw, 40px);
@@ -1198,18 +1180,12 @@ dialog > p.modal-price {
     width: 155px;
     height: 190px;
   }
-  .programme-intro {
-    gap: 30px;
-  }
   .project-slip {
     padding: 13px;
     left: 20px;
   }
 }
 @media (max-width: 850px) and (min-width: 651px) {
-  .programme-intro {
-    grid-template-columns: 1fr 2fr;
-  }
   .reservation-grid {
     gap: 6%;
   }
@@ -1224,13 +1200,7 @@ dialog > p.modal-price {
     padding: 80px 0 72px;
   }
   .programme-intro {
-    display: block;
     margin-bottom: 44px;
-  }
-  .programme-intro > .eyebrow {
-    padding-top: 0;
-    margin-bottom: 23px;
-    color: #fc7d47;
   }
   .programme-intro h2 {
   }
@@ -1305,9 +1275,6 @@ dialog > p.modal-price {
     display: block;
     margin-top: 40px;
   }
-  .programme-bottom > p {
-    color: #a79d8c;
-  }
   .underlined {
     margin-top: 20px;
     width: fit-content;
@@ -1340,7 +1307,7 @@ dialog > p.modal-price {
   }
   .reservation-note {
   }
-  .cream {
+  .book {
   }
   .reservation-backdrop {
     font-size: 290px;
