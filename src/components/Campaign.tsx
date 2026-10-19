@@ -25,7 +25,7 @@ export function Campaign() {
           ))}
         </nav>
         <a className="nav-cta" href="#reservation">
-          {nav.cta} <span aria-hidden>↗</span>
+          {nav.cta}
         </a>
       </header>
       <section className="campaign-hero" id="contenu">
@@ -72,7 +72,7 @@ export function Campaign() {
                 {campaign.aside[1]}
               </p>
               <a href="#programme">
-                {campaign.asideLink} <span aria-hidden>↗</span>
+                {campaign.asideLink} <span aria-hidden>↓</span>
               </a>
               <p className="beginner-note">{campaign.note}</p>
             </div>

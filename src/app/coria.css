@@ -7,11 +7,16 @@
   --muted: #9a978d;
   --accent: #fa5a16;
   --line: #34332d;
-  --width: 1320px;
-  --gutter: clamp(22px, 5vw, 80px);
+  --width: 1240px;
+  --gutter: clamp(26px, 6.5vw, 112px);
   /* the mockup's fonts; their free twins with the same measures where they are missing */
   --sans: Arial, var(--font-arimo), Helvetica, sans-serif;
   --serif: Georgia, var(--font-gelasio), "Times New Roman", serif;
+  --t-label: 11px;
+  --t-small: 13px;
+  --t-body: 15px;
+  --t-h3: 26px;
+  --t-title: clamp(34px, 3.2vw, 46px);
 }
 * {
   box-sizing: border-box;
@@ -67,8 +72,8 @@ em {
   letter-spacing: inherit;
 }
 .eyebrow {
-  font-size: 9px;
-  letter-spacing: 1.4px;
+  font-size: var(--t-label);
+  letter-spacing: 0.16em;
   line-height: 1.6;
   font-weight: 400;
   color: var(--accent);
@@ -83,8 +88,8 @@ em {
 .brand > span {
   display: block;
   font-family: var(--sans);
-  font-size: 6px;
-  letter-spacing: 3.4px;
+  font-size: 8px;
+  letter-spacing: 0.5em;
   margin-top: 7px;
   padding-left: 3px;
 }
@@ -93,7 +98,7 @@ em {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  font-size: 11px;
+  font-size: var(--t-small);
   padding: 15px 16px 15px 23px;
   min-height: 53px;
   border: 0;
@@ -129,7 +134,7 @@ em {
 .campaign header {
   position: relative;
   z-index: 6;
-  height: 100px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -140,18 +145,15 @@ em {
 }
 .campaign header nav {
   display: flex;
-  gap: 33px;
-  font-size: 10px;
+  gap: 40px;
+  font-size: var(--t-small);
 }
 .nav-cta {
-  font-size: 10px;
+  font-size: var(--t-small);
   border: 1px solid #fff5;
   color: #fff6ea;
-  padding: 12px 17px;
+  padding: 13px 22px;
   border-radius: 50px;
-}
-.nav-cta span {
-  padding-left: 20px;
 }
 .campaign-hero {
   position: relative;
@@ -163,37 +165,38 @@ em {
 }
 .campaign-left {
   position: relative;
-  width: 310px;
+  width: 410px;
   padding-top: 76px;
   z-index: 4;
+  padding-bottom: calc(clamp(140px, 17.5vw, 260px) * 0.74);
 }
 .campaign-left .eyebrow {
-  font-size: 8px;
-  letter-spacing: 1.2px;
+  font-size: var(--t-label);
+  letter-spacing: 0.16em;
   color: #ffe3c7;
   margin-bottom: 25px;
 }
 .campaign-left h1 {
-  font-size: 35px;
-  line-height: 1.04;
-  letter-spacing: -1.8px;
+  font-size: var(--t-title);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
   font-weight: 400;
-  margin: 0 0 20px;
+  margin: 0 0 24px;
 }
 .campaign-left h1 em {
   color: #fff5e8;
 }
 .campaign-description {
-  font-size: 11px;
+  font-size: var(--t-body);
   line-height: 1.7;
-  max-width: 265px;
+  max-width: 330px;
   color: #ffe6ce;
-  margin: 0 0 28px;
+  margin: 0 0 32px;
 }
 .campaign-button {
   background: #941b0b;
   color: #fff4e5;
-  font-size: 10px;
+  font-size: var(--t-small);
   min-height: 49px;
   padding: 14px 17px 14px 23px;
 }
@@ -217,7 +220,7 @@ em {
 .pass-card {
   background: #fff6e9;
   color: #421e13;
-  width: 148px;
+  width: 160px;
   box-shadow: 0 12px 30px #b5351615;
 }
 .date-card {
@@ -228,31 +231,32 @@ em {
 }
 .pass-card > span,
 .date-card > span {
-  font-size: 6px;
-  letter-spacing: 0.6px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
   line-height: 1.7;
 }
 .pass-card strong {
-  font-size: 35px;
+  font-size: 38px;
   letter-spacing: -2px;
   font-weight: 400;
   white-space: nowrap;
 }
 .pass-card small {
-  display: block;
-  font-size: 8px;
+  display: inline;
+  font-size: 11px;
   letter-spacing: 0.7px;
-  margin-top: 5px;
+  margin-left: 6px;
 }
 .date-card strong {
-  font-size: 21px;
+  font-size: 24px;
   letter-spacing: -1px;
   font-weight: 400;
   white-space: nowrap;
 }
 .date-card > span:last-child {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0;
+  line-height: 1.6;
 }
 .campaign-right {
   position: absolute;
@@ -263,9 +267,9 @@ em {
   text-align: right;
 }
 .campaign-title {
-  font-size: 64px;
-  letter-spacing: -4.5px;
-  line-height: 1.02;
+  font-size: var(--t-title);
+  letter-spacing: -0.035em;
+  line-height: 1.06;
   margin: 0;
   font-weight: 400;
 }
@@ -274,29 +278,26 @@ em {
 }
 .campaign-aside {
   margin: 40px 0 0 auto;
-  width: 245px;
+  width: 270px;
   text-align: left;
 }
 .campaign-aside > p:first-child {
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: var(--t-body);
+  line-height: 1.6;
   color: #ffe8d5;
 }
 .campaign-aside > a {
-  font-size: 10px;
+  font-size: var(--t-small);
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ffcca977;
   padding: 19px 0 16px;
 }
 .beginner-note {
-  font-size: 10px;
-  line-height: 1.7;
+  font-size: var(--t-small);
+  line-height: 1.6;
   color: #ffe2c5;
-  margin-top: 25px;
-  border: 1px solid #ffc89f55;
-  padding: 20px;
-  border-radius: 12px;
+  margin-top: 22px;
 }
 .campaign-word {
   position: absolute;
@@ -331,8 +332,8 @@ em {
   right: 0;
   bottom: 20px;
   z-index: 5;
-  font-size: 5px;
-  letter-spacing: 1.2px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
   color: #ffdfba;
 }
 
@@ -348,26 +349,28 @@ em {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  min-height: 102px;
+  min-height: 96px;
 }
 .campaign-strip > .wrap > span {
-  font-size: 8px;
-  letter-spacing: 1.5px;
+  font-size: var(--t-label);
+  letter-spacing: 0.16em;
   color: #928d80;
 }
 .campaign-strip > .wrap > div {
   display: flex;
-  gap: 9px;
+  gap: 0;
 }
 .campaign-strip > .wrap > div > span {
-  border: 1px solid #49463b;
-  border-radius: 50px;
-  padding: 10px 17px;
-  font-size: 9px;
+  font-size: var(--t-small);
   color: #d4cebf;
 }
+.campaign-strip > .wrap > div > span + span::before {
+  content: "·";
+  margin: 0 14px;
+  color: #6b665a;
+}
 .campaign-strip a {
-  font-size: 9px;
+  font-size: var(--t-small);
   color: #a49c88;
 }
 
@@ -389,24 +392,21 @@ em {
     top: 95px;
   }
   .campaign-title {
-    font-size: 70px;
   }
 }
 @media (max-width: 1150px) {
   .campaign-left {
-    width: 255px;
+    width: 300px;
     padding-top: 65px;
+    padding-bottom: calc(18vw * 0.74);
   }
   .campaign-left h1 {
-    font-size: 30px;
   }
   .campaign-right {
     width: 285px;
     top: 65px;
   }
   .campaign-title {
-    font-size: 53px;
-    letter-spacing: -3px;
   }
   .campaign-aside {
     width: 210px;
@@ -429,13 +429,13 @@ em {
     min-height: 140px;
   }
   .pass-card {
-    width: 126px;
+    width: 134px;
   }
   .pass-card strong {
     font-size: 29px;
   }
   .date-card strong {
-    font-size: 18px;
+    font-size: 20px;
   }
   .campaign-word {
     bottom: 0;
@@ -452,40 +452,42 @@ em {
     left: 55%;
   }
   .campaign-left {
-    width: 250px;
+    width: 270px;
   }
   .campaign-right {
     width: 260px;
     top: 60px;
   }
   .campaign-title {
-    font-size: 46px;
   }
   .campaign-aside {
     width: 170px;
     margin-top: 23px;
   }
   .campaign-aside > p:first-child {
-    font-size: 11px;
+    font-size: var(--t-small);
   }
   .beginner-note {
-    padding: 13px;
-    font-size: 9px;
   }
   .campaign-strip > .wrap > span {
     display: none;
   }
 }
 @media (max-width: 650px) {
+  :root {
+    --t-label: 10px;
+    --t-body: 14px;
+    --t-title: clamp(31px, 8.6vw, 38px);
+  }
   .brand {
     font-size: 26px;
   }
   .eyebrow {
-    font-size: 7px;
-    letter-spacing: 1px;
+    font-size: var(--t-label);
+    letter-spacing: 0.14em;
   }
   .button {
-    font-size: 10px;
+    font-size: var(--t-small);
     gap: 21px;
     padding: 14px 12px 14px 19px;
   }
@@ -496,12 +498,9 @@ em {
     display: none;
   }
   .nav-cta {
-    font-size: 9px;
-    padding: 10px 13px;
+    font-size: 12px;
+    padding: 10px 16px;
     border-color: #ffd5b477;
-  }
-  .nav-cta span {
-    padding-left: 12px;
   }
   .campaign-inner {
     min-height: 1090px;
@@ -510,27 +509,27 @@ em {
     padding-top: 28px;
     width: 100%;
     max-width: 370px;
+    padding-bottom: 0;
   }
   .campaign-left .eyebrow {
-    font-size: 7px;
     margin-bottom: 20px;
   }
   .campaign-left h1 {
-    font-size: 37px;
-    line-height: 1.04;
-    letter-spacing: -1.9px;
+    font-size: var(--t-title);
+    line-height: 1.06;
+    letter-spacing: -0.035em;
     max-width: 340px;
     margin-bottom: 18px;
   }
   .campaign-description {
-    font-size: 12px;
-    line-height: 1.65;
+    font-size: var(--t-body);
+    line-height: 1.7;
     max-width: 315px;
     margin-bottom: 23px;
   }
   .campaign-button {
     min-height: 49px;
-    font-size: 11px;
+    font-size: var(--t-small);
   }
   .session-cards {
     margin-top: 27px;
@@ -551,32 +550,33 @@ em {
   }
   .pass-card small {
     display: inline;
-    font-size: 8px;
+    font-size: 11px;
     letter-spacing: 0;
     margin-left: 5px;
   }
   .pass-card > span,
   .date-card > span {
-    font-size: 6px;
   }
   .date-card strong {
     font-size: 22px;
   }
   .date-card > span:last-child {
-    font-size: 7px;
+    font-size: 12px;
   }
   .campaign-right {
-    top: 560px;
+    top: auto;
     right: 0;
     width: 100%;
     text-align: right;
     z-index: 3;
     pointer-events: none;
+    position: relative;
+    margin-top: 64px;
   }
   .campaign-title {
-    font-size: 43px;
-    letter-spacing: -3px;
-    line-height: 1.02;
+    font-size: var(--t-title);
+    letter-spacing: -0.035em;
+    line-height: 1.06;
     max-width: 310px;
     margin-left: auto;
     text-shadow: 0 2px 20px #3d0c0730;
@@ -599,9 +599,7 @@ em {
     z-index: 1;
   }
   .portrait-note {
-    font-size: 4px;
     bottom: 9px;
-    letter-spacing: 0.8px;
   }
   .campaign-strip > .wrap {
     min-height: 110px;
@@ -611,17 +609,14 @@ em {
     padding-block: 21px;
   }
   .campaign-strip > .wrap > span {
-    font-size: 6px;
-    letter-spacing: 1px;
+    font-size: var(--t-label);
+    letter-spacing: 0.14em;
     width: 100%;
     text-align: center;
   }
   .campaign-strip > .wrap > div {
-    gap: 7px;
   }
   .campaign-strip > .wrap > div > span {
-    font-size: 8px;
-    padding: 8px 13px;
   }
   .campaign-strip a {
     display: none;
@@ -659,10 +654,21 @@ em {
     backdrop-filter: blur(8px);
   }
 }
-/* the narrowest phones: the column on the left is taller, the big line starts lower */
+/* the narrowest phones: the two cards share 270px */
 @media (max-width: 359px) {
-  .campaign-right {
-    top: 640px;
+  .pass-card {
+    width: 128px;
+  }
+  .pass-card,
+  .date-card {
+    padding: 14px 12px;
+  }
+  .pass-card > span,
+  .date-card > span {
+    letter-spacing: 0.02em;
+  }
+  .date-card strong {
+    font-size: 20px;
   }
 }
 @media (max-width: 650px) and (min-resolution: 2.5dppx) {
@@ -675,21 +681,21 @@ em {
 /* ------------------------------------------------------------------ */
 .programme {
   background: #0e0e0c;
-  padding: 100px 0 80px;
+  padding: 130px 0 110px;
 }
 .programme-intro {
   display: grid;
   grid-template-columns: 1fr 2.2fr;
   gap: 50px;
-  margin-bottom: 55px;
+  margin-bottom: 72px;
 }
 .programme-intro > .eyebrow {
-  padding-top: 8px;
+  padding-top: 14px;
 }
 .programme-intro h2 {
-  font-size: 46px;
+  font-size: var(--t-title);
   font-weight: 400;
-  letter-spacing: -2px;
+  letter-spacing: -0.035em;
   line-height: 1.06;
   margin: 0;
 }
@@ -700,16 +706,16 @@ em {
   color: #ff6b27;
 }
 .programme-intro > div > p {
-  max-width: 360px;
-  font-size: 12px;
-  line-height: 1.8;
+  max-width: 400px;
+  font-size: var(--t-body);
+  line-height: 1.7;
   color: #aaa293;
-  margin: 23px 0 0 auto;
+  margin: 28px 0 0 auto;
 }
 .learning-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 23px;
+  gap: 28px;
   align-items: start;
 }
 .learning {
@@ -741,43 +747,36 @@ em {
   overflow: hidden;
 }
 .lesson-copy {
-  padding: 16px 29px 30px;
+  padding: 22px 30px 34px;
   margin-top: auto;
 }
 .lesson-category {
-  font-size: 6px;
-  letter-spacing: 1.2px;
-  opacity: 0.6;
-  margin: 0 0 16px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  opacity: 0.65;
+  margin: 0 0 14px;
 }
 .lesson-copy h3 {
   font-weight: 400;
-  font-size: 27px;
-  line-height: 1.13;
-  letter-spacing: -1px;
-  margin: 0 0 18px;
+  font-size: var(--t-h3);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin: 0 0 14px;
 }
 .lesson-copy h3 em {
   font-family: var(--serif);
   font-style: italic;
-  letter-spacing: -1px;
+  letter-spacing: -0.02em;
   color: inherit;
   opacity: 0.8;
-  font-size: 1.06em;
+  font-size: 1em;
 }
 .lesson-copy > p:not(.lesson-category) {
-  font-size: 12px;
-  line-height: 1.75;
-  opacity: 0.67;
+  font-size: 14px;
+  line-height: 1.65;
+  opacity: 0.72;
   margin: 0;
-  max-width: 260px;
-}
-.lesson-rule {
-  display: block;
-  width: 24px;
-  border-bottom: 1px solid currentColor;
-  opacity: 0.4;
-  margin-top: 25px;
+  max-width: 300px;
 }
 /* card 1: the wireframe and the finished page */
 .wireframe {
@@ -966,23 +965,23 @@ em {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  margin-top: 45px;
+  margin-top: 64px;
 }
 .programme-bottom > p {
-  font-size: 11px;
-  line-height: 1.8;
+  font-size: var(--t-small);
+  line-height: 1.7;
   color: #9f9685;
 }
 .underlined {
-  font-size: 12px;
+  font-size: 14px;
   border-bottom: 1px solid #73644e;
   padding-bottom: 12px;
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 60px;
 }
 .underlined span {
-  font-size: 21px;
+  font-size: 18px;
 }
 
 /* ------------------------------------------------------------------ */
@@ -992,7 +991,7 @@ em {
   position: relative;
   background: #f25716;
   color: #24120b;
-  padding: 90px 0;
+  padding: 130px 0;
   overflow: hidden;
   isolation: isolate;
 }
@@ -1015,46 +1014,45 @@ em {
 }
 .reservation .eyebrow {
   color: #5e2311;
-  font-size: 8px;
 }
 .reservation-copy h2 {
-  font-size: 61px;
+  font-size: var(--t-title);
   font-weight: 400;
-  line-height: 1.07;
-  letter-spacing: -3px;
-  margin: 0 0 25px;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  margin: 0 0 28px;
 }
 .reservation-copy h2 em {
   color: #fff2dc;
 }
 .reservation-copy > p:last-child {
-  font-size: 12px;
-  line-height: 1.8;
+  font-size: var(--t-body);
+  line-height: 1.7;
   color: #612512;
 }
 .reservation-details {
   background: #fff2dd;
   border-radius: 14px;
-  padding: 35px;
+  padding: 40px;
   color: #36180d;
   box-shadow: 0 20px 45px #9b260d22;
 }
 .session-date > span,
 .reservation-price > span {
-  font-size: 7px;
-  letter-spacing: 1.5px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
   color: #98715a;
 }
 .session-date strong {
   display: block;
-  font-size: 22px;
+  font-size: var(--t-h3);
   font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: -0.5px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
   margin-top: 15px;
 }
 .session-date > p {
-  font-size: 10px;
+  font-size: var(--t-small);
   color: #82583f;
   margin-top: 12px;
 }
@@ -1067,7 +1065,7 @@ em {
   font-size: 57px;
   letter-spacing: -2.5px;
   line-height: 1;
-  margin: 16px 0 25px;
+  margin: 14px 0 28px;
 }
 .reservation-price small {
   font-size: 15px;
@@ -1086,8 +1084,8 @@ em {
   background: #612612;
 }
 .reservation-note {
-  font-size: 8px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.6;
   color: #8f6e58;
   text-align: center;
   margin-top: 16px;
@@ -1100,15 +1098,17 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  min-height: 125px;
+  gap: 24px;
+  min-height: 140px;
   background: #0e0e0c;
   color: #f3ecdd;
+  flex-wrap: wrap;
 }
 footer > p,
 footer > span {
-  font-size: 9px;
+  font-size: var(--t-small);
   color: #8f8777;
+  margin: 0;
 }
 dialog {
   width: min(550px, calc(100% - 32px));
@@ -1127,16 +1127,16 @@ dialog .eyebrow {
   color: #b34720;
 }
 dialog h2 {
-  font-size: 35px;
+  font-size: clamp(30px, 3vw, 40px);
   font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -1.5px;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
 }
 dialog em {
   color: #c34714;
 }
 dialog > p:not(.eyebrow) {
-  font-size: 12px;
+  font-size: var(--t-body);
   color: #8a6e57;
   line-height: 1.7;
 }
@@ -1160,7 +1160,7 @@ dialog > p.modal-price {
   border: 0;
   border-bottom: 1px solid #aa3b13;
   background: none;
-  font-size: 11px;
+  font-size: var(--t-small);
   color: #aa3b13;
   padding: 10px 0;
 }
@@ -1168,10 +1168,8 @@ dialog > p.modal-price {
 /* the programme, the booking and the footer on smaller screens (the mockup's V2 and V3 steps, merged) */
 @media (max-width: 1150px) {
   .programme-intro h2 {
-    font-size: 39px;
   }
   .reservation-copy h2 {
-    font-size: 52px;
   }
 }
 @media (max-width: 1050px) {
@@ -1179,10 +1177,10 @@ dialog > p.modal-price {
     gap: 16px;
   }
   .lesson-copy {
-    padding: 16px 21px 25px;
+    padding: 20px 22px 28px;
   }
   .lesson-copy h3 {
-    font-size: 24px;
+    font-size: 23px;
   }
   .lesson-art {
     height: 255px;
@@ -1216,7 +1214,6 @@ dialog > p.modal-price {
     gap: 6%;
   }
   .reservation-copy h2 {
-    font-size: 46px;
   }
   .reservation-details {
     padding: 26px;
@@ -1224,11 +1221,11 @@ dialog > p.modal-price {
 }
 @media (max-width: 650px) {
   .programme {
-    padding: 55px 0;
+    padding: 80px 0 72px;
   }
   .programme-intro {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 44px;
   }
   .programme-intro > .eyebrow {
     padding-top: 0;
@@ -1236,12 +1233,10 @@ dialog > p.modal-price {
     color: #fc7d47;
   }
   .programme-intro h2 {
-    font-size: 32px;
-    letter-spacing: -1.5px;
   }
   .programme-intro > div > p {
-    margin: 20px 0 0;
-    max-width: 320px;
+    margin: 22px 0 0;
+    max-width: none;
   }
   .learning-grid {
     grid-template-columns: 1fr;
@@ -1261,17 +1256,14 @@ dialog > p.modal-price {
     height: 265px;
   }
   .lesson-copy {
-    padding: 16px 28px 28px;
+    padding: 22px 26px 30px;
   }
   .lesson-copy h3 {
-    font-size: 30px;
   }
   .lesson-copy > p:not(.lesson-category) {
     max-width: none;
-    font-size: 13px;
   }
   .lesson-category {
-    font-size: 7px;
   }
   .wireframe {
     width: 180px;
@@ -1311,36 +1303,34 @@ dialog > p.modal-price {
   }
   .programme-bottom {
     display: block;
-    margin-top: 26px;
+    margin-top: 40px;
   }
   .programme-bottom > p {
     color: #a79d8c;
   }
   .underlined {
-    margin-top: 23px;
+    margin-top: 20px;
     width: fit-content;
   }
   .reservation {
-    padding: 55px 0;
+    padding: 80px 0;
   }
   .reservation-grid {
     grid-template-columns: 1fr;
     gap: 35px;
   }
   .reservation-copy h2 {
-    font-size: 44px;
-    letter-spacing: -2px;
   }
   .reservation-copy h2 em br,
   .session-date strong br {
     display: none;
   }
   .reservation-details {
-    padding: 28px;
+    padding: 30px 26px;
     border-radius: 12px;
   }
   .session-date strong {
-    font-size: 23px;
+    font-size: 24px;
   }
   .reservation-price > p {
     font-size: 56px;
@@ -1349,10 +1339,8 @@ dialog > p.modal-price {
     font-size: 14px;
   }
   .reservation-note {
-    font-size: 9px;
   }
   .cream {
-    font-size: 12px;
   }
   .reservation-backdrop {
     font-size: 290px;
@@ -1360,19 +1348,17 @@ dialog > p.modal-price {
     letter-spacing: -25px;
   }
   footer {
-    flex-wrap: wrap;
-    min-height: 140px;
-    padding-block: 30px;
+    padding-block: 44px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
   }
   footer > span {
-    width: 100%;
-    font-size: 8px;
   }
   dialog {
     padding: 40px 25px;
   }
   dialog h2 {
-    font-size: 31px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -20,7 +20,7 @@ Marque : Coria · ACADEMY
 
 Liens : Le programme · La masterclass
 
-Bouton : Prendre ma place ↗
+Bouton : Prendre ma place
 
 ## 01 · Haut de page
 
@@ -40,7 +40,7 @@ Grande accroche : DU DESIGN AU SITE WEB.
 
 Texte à droite : Une démonstration concrète. Un vrai site créé sous tes yeux.
 
-Lien : Découvrir le programme ↗
+Lien : Découvrir le programme ↓
 
 Note : Aucune expérience en programmation requise pour assister à la session.
 
@@ -84,7 +84,7 @@ Carte 3
 - Titre : Une compétence. Un nouvel horizon.
 - Texte : Comment transformer cette compétence en opportunité de revenus.
 
-Bas de section : Aucune expérience en programmation requise pour assister à la session. · Lien : Ça commence avec toi ↗
+Bas de section : Aucune expérience en programmation requise pour assister à la session. · Lien : Ça commence avec toi ↓
 
 ## 04 · Réservation
 

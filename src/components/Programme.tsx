@@ -101,7 +101,7 @@ export function Programme() {
             {programme.note[1]}
           </p>
           <a className="underlined" href="#reservation">
-            {programme.link} <span aria-hidden>↗</span>
+            {programme.link} <span aria-hidden>↓</span>
           </a>
         </div>
       </div>
@@ -119,7 +119,6 @@ function Lesson({ category, title, text }: { category: string; title: string[]; 
         <em>{title[1]}</em>
       </h3>
       <p>{text}</p>
-      <span className="lesson-rule" />
     </div>
   );
 }
