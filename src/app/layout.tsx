@@ -1,19 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Arimo, Gelasio } from "next/font/google";
+import { Bricolage_Grotesque, DM_Sans, Gelasio } from "next/font/google";
 import "./coria.css";
 
-// The mockup's type is Arial and Georgia. Phones without them (Android) get their free twins, with the same
-// measures: Arimo for Arial, Gelasio for Georgia. Not preloaded: a computer that has Arial and Georgia never
-// downloads them.
-const arimo = Arimo({ subsets: ["latin"], variable: "--font-arimo", display: "swap", preload: false });
-const gelasio = Gelasio({
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-gelasio",
-  display: "swap",
-  preload: false,
-});
+// Charifa's choice (19 October 2026, font board « B »): Bricolage Grotesque for the titles, DM Sans for the text.
+// Gelasio is only the stand-in for Georgia in the drawn « ORA » site on the first card; it is not preloaded.
+const bricolage = Bricolage_Grotesque({ subsets: ["latin"], axes: ["opsz"], variable: "--font-bricolage", display: "swap" });
+const dmsans = DM_Sans({ subsets: ["latin"], variable: "--font-dmsans", display: "swap" });
+const gelasio = Gelasio({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-gelasio", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   title: "Crée ce que tu imagines · Masterclass Claude Code",
@@ -28,7 +21,7 @@ export const viewport: Viewport = { themeColor: "#f34c07" };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     // suppressHydrationWarning: the script below adds a class to <html> before React starts
-    <html lang="fr" className={`${arimo.variable} ${gelasio.variable}`} suppressHydrationWarning>
+    <html lang="fr" className={`${bricolage.variable} ${dmsans.variable} ${gelasio.variable}`} suppressHydrationWarning>
       <head>
         {/* the blocks that appear on scroll start hidden only when motion is welcome and this script ran */}
         <script

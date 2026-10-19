@@ -9,14 +9,17 @@
   --line: #34332d;
   --width: 1240px;
   --gutter: clamp(26px, 6.5vw, 112px);
-  /* the mockup's fonts; their free twins with the same measures where they are missing */
-  --sans: Arial, var(--font-arimo), Helvetica, sans-serif;
-  --serif: Georgia, var(--font-gelasio), "Times New Roman", serif;
+  /* one type scale for the whole page */
   --t-label: 11px;
   --t-small: 13px;
   --t-body: 15px;
   --t-h3: 26px;
   --t-title: clamp(34px, 3.2vw, 46px);
+  /* Charifa's choice: DM Sans for the text, Bricolage Grotesque for the titles (loaded in layout.tsx) */
+  --sans: var(--font-dmsans), "DM Sans", Arial, Helvetica, sans-serif;
+  --display: var(--font-bricolage), "Bricolage Grotesque", var(--font-dmsans), Arial, sans-serif;
+  /* Georgia, only for the drawn « ORA » site on the first card */
+  --serif: Georgia, var(--font-gelasio), "Times New Roman", serif;
 }
 * {
   box-sizing: border-box;
@@ -622,31 +625,40 @@ em {
     display: none;
   }
 }
-/* A phone (Charifa's choice, 19 October 2026): a real photograph fills the whole top, darkened at the top so the
-   text stays readable; the computer keeps the mockup's cut-out portrait. Photograph by JEaLiFe Pictures (Unsplash,
-   free licence), cropped to its middle and resized for phones: only a phone downloads it. */
+/* A phone (Charifa's choice, 19 October 2026): the photograph fills the whole top and an orange glow sits behind
+   the woman, like the light behind the portrait on a computer. Photograph by JEaLiFe Pictures (Unsplash, free
+   licence): the woman is cut out of it (femme-*.webp, same crop and size as the wall), and the wall behind her is a
+   tiny blurred copy (mur-300.webp). Layers, from the top: the woman, the glow, a wash of the brand's orange from the
+   top, the wall. The computer keeps the mockup's cut-out portrait. Only a phone downloads these images. */
 @media (max-width: 650px) {
   .campaign {
     position: relative;
     isolation: isolate;
-    background: #5a2408;
+    background: #f54d06;
+    --femme: url(/assets/femme-800.webp);
   }
-  /* the photograph on its own layer (so it can ease back from a slight zoom on arrival), the shade above it */
   .campaign::before {
     content: "";
     position: absolute;
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background: url(/assets/fond-telephone-800.webp) 50% 62% / cover no-repeat;
+    background:
+      var(--femme) 50% 62% / cover no-repeat,
+      radial-gradient(ellipse 100% 46% at 46% 38%, rgba(255, 140, 20, 1) 0, rgba(255, 100, 0, 0.85) 42%, rgba(245, 77, 6, 0) 80%),
+      linear-gradient(270deg, rgba(169, 17, 8, 0.5) 0, rgba(169, 17, 8, 0) 55%),
+      linear-gradient(180deg, rgba(255, 90, 0, 0.92) 0, rgba(250, 82, 4, 0.7) 30%, rgba(245, 77, 6, 0.28) 52%, rgba(245, 77, 6, 0) 70%),
+      url(/assets/mur-300.webp) 50% 62% / cover no-repeat;
+    background-blend-mode: normal, screen, normal, normal, normal;
   }
+  /* a light shade only where the writing sits over her, so the text stays readable */
   .campaign::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background: linear-gradient(180deg, rgba(60, 16, 4, 0.86) 0%, rgba(60, 16, 4, 0.72) 30%, rgba(60, 16, 4, 0.35) 50%, rgba(60, 16, 4, 0) 64%, rgba(14, 14, 12, 0.35) 100%);
+    background: linear-gradient(180deg, rgba(40, 10, 2, 0.1) 0, rgba(40, 10, 2, 0.12) 36%, rgba(40, 10, 2, 0.03) 58%, rgba(14, 14, 12, 0) 66%, rgba(14, 14, 12, 0.3) 100%);
   }
   .campaign-hero {
     z-index: 1;
@@ -656,12 +668,31 @@ em {
     display: none;
   }
   .campaign-title {
-    text-shadow: 0 2px 24px rgba(20, 6, 2, 0.55);
+    text-shadow: 0 2px 24px rgba(20, 6, 2, 0.5);
+  }
+  .campaign-left h1,
+  .campaign-description {
+    text-shadow: 0 1px 18px rgba(40, 10, 2, 0.45);
   }
   .date-card {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
+  }
+}
+/* a computer: the same glow behind the portrait, and it breathes very slowly (see Motion) */
+@media (min-width: 651px) {
+  .campaign {
+    position: relative;
+    isolation: isolate;
+  }
+  .campaign::before {
+    content: "";
+    position: absolute;
+    inset: -8% -4% 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 34% 50% at 50% 56%, rgba(255, 160, 40, 0.55) 0, rgba(255, 110, 10, 0.28) 45%, rgba(255, 90, 0, 0) 75%);
   }
 }
 /* the narrowest phones: the two cards share 270px */
@@ -682,8 +713,8 @@ em {
   }
 }
 @media (max-width: 650px) and (min-resolution: 2.5dppx) {
-  .campaign::before {
-    background-image: url(/assets/fond-telephone-1100.webp);
+  .campaign {
+    --femme: url(/assets/femme-1100.webp);
   }
 }
 /* ------------------------------------------------------------------ */
@@ -768,9 +799,7 @@ em {
   margin: 0 0 14px;
 }
 .lesson-copy h3 em {
-  font-family: var(--serif);
-  font-style: italic;
-  letter-spacing: -0.02em;
+  letter-spacing: inherit;
   color: inherit;
   opacity: 0.8;
   font-size: 1em;
@@ -1452,7 +1481,7 @@ dialog > p.modal-price {
     transition: color 0.5s ease calc(var(--i) * 0.35s);
   }
   .anim .strip-verbs:not(.is-in) > span {
-    color: #3c3a33;
+    color: #57544a;
   }
   .anim .strip-verbs.is-in > span:last-child {
     color: #d4cebf;
@@ -1523,6 +1552,37 @@ dialog > p.modal-price {
       transform 0.2s,
       background 0.2s;
   }
+}
+/* ------------------------------------------------------------------ */
+/* Typography: titles in Bricolage Grotesque                          */
+/* ------------------------------------------------------------------ */
+h1,
+h2,
+h3,
+.brand,
+.campaign-title,
+.campaign-word,
+.pass-card strong,
+.date-card strong,
+.session-date strong,
+.reservation-price > p,
+.reservation-backdrop,
+.modal-price,
+.portfolio-label,
+.strip-verbs {
+  font-family: var(--display);
+  font-weight: 500;
+}
+.campaign-word,
+.reservation-backdrop {
+  font-weight: 500;
+  font-style: normal;
+}
+.campaign-word {
+  letter-spacing: -0.05em;
+}
+em {
+  font-family: inherit;
 }
 @media (prefers-reduced-motion: reduce) {
   html {
