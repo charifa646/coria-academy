@@ -1,5 +1,8 @@
 import { Campaign } from "@/components/Campaign";
 import { Strip } from "@/components/Strip";
+import { Programme } from "@/components/Programme";
+import { Reservation } from "@/components/Reservation";
+import { Footer } from "@/components/Footer";
 import { skip } from "@/content";
 
 export default function Home() {
@@ -10,6 +13,11 @@ export default function Home() {
       </a>
       <Campaign />
       <Strip />
+      <main>
+        <Programme />
+        <Reservation />
+      </main>
+      <Footer />
     </>
   );
 }

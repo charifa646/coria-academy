@@ -670,6 +670,711 @@ em {
     background-image: url(/assets/fond-telephone-1100.webp);
   }
 }
+/* ------------------------------------------------------------------ */
+/* 03 · The programme: three offset cards on black                    */
+/* ------------------------------------------------------------------ */
+.programme {
+  background: #0e0e0c;
+  padding: 100px 0 80px;
+}
+.programme-intro {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  gap: 50px;
+  margin-bottom: 55px;
+}
+.programme-intro > .eyebrow {
+  padding-top: 8px;
+}
+.programme-intro h2 {
+  font-size: 46px;
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 1.06;
+  margin: 0;
+}
+.programme-intro h2 > span {
+  color: #827d70;
+}
+.programme-intro h2 em {
+  color: #ff6b27;
+}
+.programme-intro > div > p {
+  max-width: 360px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #aaa293;
+  margin: 23px 0 0 auto;
+}
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+  align-items: start;
+}
+.learning {
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 505px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.learning-design {
+  background: #f2ecdf;
+  color: #2f281e;
+}
+.learning-code {
+  background: #e64c16;
+  color: #fff1db;
+  margin-top: 65px;
+}
+.learning-future {
+  background: #211f1a;
+  border: 1px solid #373127;
+  color: #f6ecdb;
+  margin-top: 10px;
+}
+.lesson-art {
+  height: 285px;
+  position: relative;
+  overflow: hidden;
+}
+.lesson-copy {
+  padding: 16px 29px 30px;
+  margin-top: auto;
+}
+.lesson-category {
+  font-size: 6px;
+  letter-spacing: 1.2px;
+  opacity: 0.6;
+  margin: 0 0 16px;
+}
+.lesson-copy h3 {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 1.13;
+  letter-spacing: -1px;
+  margin: 0 0 18px;
+}
+.lesson-copy h3 em {
+  font-family: var(--serif);
+  font-style: italic;
+  letter-spacing: -1px;
+  color: inherit;
+  opacity: 0.8;
+  font-size: 1.06em;
+}
+.lesson-copy > p:not(.lesson-category) {
+  font-size: 12px;
+  line-height: 1.75;
+  opacity: 0.67;
+  margin: 0;
+  max-width: 260px;
+}
+.lesson-rule {
+  display: block;
+  width: 24px;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.4;
+  margin-top: 25px;
+}
+/* card 1: the wireframe and the finished page */
+.wireframe {
+  width: 180px;
+  height: 212px;
+  background: #f4f2eb;
+  border: 1px solid #c9c5b9;
+  position: absolute;
+  left: 19px;
+  top: 25px;
+  transform: rotate(-10deg);
+  padding: 15px;
+  box-shadow: 0 10px 22px #81786119;
+}
+.wire-nav {
+  height: 6px;
+  border-bottom: 1px solid #d0c9b8;
+  margin-bottom: 20px;
+}
+.wire-heading {
+  height: 7px;
+  width: 85px;
+  background: #dfd9cc;
+  margin-top: 5px;
+}
+.wire-heading.short {
+  width: 55px;
+}
+.wire-box {
+  height: 82px;
+  margin-top: 20px;
+  border: 1px solid #d8d1c1;
+  background: linear-gradient(28deg, transparent 49.5%, #ddd6c7 49.5% 50.5%, transparent 50.5%);
+}
+.wireframe > span {
+  font-size: 5px;
+  color: #b1a996;
+  display: block;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+.finished-design {
+  position: absolute;
+  right: 9px;
+  top: 55px;
+  width: 205px;
+  height: 210px;
+  transform: rotate(7deg);
+  box-shadow: 0 13px 30px #67584433;
+  border: 4px solid #f7f1e6;
+  background: #b77c47;
+  color: white;
+  overflow: hidden;
+}
+.finished-design img {
+  object-fit: cover;
+}
+.finished-design > b {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  font: 400 12px var(--serif);
+  letter-spacing: 3px;
+}
+.finished-design > p {
+  position: absolute;
+  top: 47px;
+  left: 13px;
+  font: 32px/0.95 var(--serif);
+  letter-spacing: -1px;
+}
+.finished-design > p em {
+  color: inherit;
+  font-family: var(--serif);
+}
+.finished-design > span {
+  position: absolute;
+  bottom: 13px;
+  left: 13px;
+  font-size: 5px;
+  letter-spacing: 0.8px;
+}
+/* card 2: the editor */
+.editor {
+  position: absolute;
+  left: 22px;
+  right: -20px;
+  top: 30px;
+  height: 240px;
+  border-radius: 8px;
+  background: #30160d;
+  transform: rotate(-6deg);
+  padding: 17px;
+  color: #f6e5d3;
+  box-shadow: 0 17px 32px #571d2440;
+  border: 1px solid #ffac75;
+}
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 7px;
+  color: #b99d83;
+  border-bottom: 1px solid #514035;
+  padding-bottom: 12px;
+}
+.prompt {
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 15px 0;
+  color: #ecdbc4;
+}
+.code-lines {
+  font: 7px/1.8 monospace;
+  color: #bba993;
+}
+.code-lines > span {
+  display: block;
+}
+.code-lines i {
+  font-style: normal;
+  color: #d69d79;
+}
+.editor-bottom {
+  display: block;
+  font-size: 4px;
+  letter-spacing: 1.1px;
+  color: #886e5c;
+  margin-top: 13px;
+}
+/* card 3: the photograph and the offer slip */
+.future-art > img {
+  object-fit: cover;
+}
+.future-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#14161255, transparent, #232522);
+}
+.portfolio-label {
+  position: absolute;
+  left: 25px;
+  top: 27px;
+  font-size: 17px;
+  line-height: 1.15;
+  z-index: 1;
+  letter-spacing: -0.7px;
+}
+.portfolio-label em {
+  font-size: 36px;
+  color: white;
+}
+.project-slip {
+  position: absolute;
+  z-index: 2;
+  right: 15px;
+  bottom: 24px;
+  left: 35px;
+  background: #f4eee0;
+  color: #37342c;
+  padding: 18px;
+  transform: rotate(-7deg);
+  box-shadow: 0 10px 22px #0003;
+}
+.project-slip > span {
+  font-size: 5px;
+  letter-spacing: 1px;
+  color: #998c74;
+  display: block;
+}
+.project-slip > b {
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  font-weight: 400;
+  display: block;
+  margin-top: 9px;
+}
+.project-slip > small {
+  font-size: 5px;
+  color: #9c8c77;
+  display: block;
+  margin-top: 10px;
+}
+.programme-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 45px;
+}
+.programme-bottom > p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #9f9685;
+}
+.underlined {
+  font-size: 12px;
+  border-bottom: 1px solid #73644e;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.underlined span {
+  font-size: 21px;
+}
+
+/* ------------------------------------------------------------------ */
+/* 04 · The booking: orange, with a cream panel                       */
+/* ------------------------------------------------------------------ */
+.reservation {
+  position: relative;
+  background: #f25716;
+  color: #24120b;
+  padding: 90px 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+.reservation-backdrop {
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  font: italic 420px/1 var(--serif);
+  letter-spacing: -35px;
+  color: #7c1f0710;
+  z-index: -1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.reservation-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 10%;
+  align-items: center;
+}
+.reservation .eyebrow {
+  color: #5e2311;
+  font-size: 8px;
+}
+.reservation-copy h2 {
+  font-size: 61px;
+  font-weight: 400;
+  line-height: 1.07;
+  letter-spacing: -3px;
+  margin: 0 0 25px;
+}
+.reservation-copy h2 em {
+  color: #fff2dc;
+}
+.reservation-copy > p:last-child {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #612512;
+}
+.reservation-details {
+  background: #fff2dd;
+  border-radius: 14px;
+  padding: 35px;
+  color: #36180d;
+  box-shadow: 0 20px 45px #9b260d22;
+}
+.session-date > span,
+.reservation-price > span {
+  font-size: 7px;
+  letter-spacing: 1.5px;
+  color: #98715a;
+}
+.session-date strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-top: 15px;
+}
+.session-date > p {
+  font-size: 10px;
+  color: #82583f;
+  margin-top: 12px;
+}
+.reservation-price {
+  border-top: 1px solid #e2cab3;
+  margin-top: 25px;
+  padding-top: 23px;
+}
+.reservation-price > p {
+  font-size: 57px;
+  letter-spacing: -2.5px;
+  line-height: 1;
+  margin: 16px 0 25px;
+}
+.reservation-price small {
+  font-size: 15px;
+  letter-spacing: 0;
+  color: #79523b;
+}
+.cream {
+  background: #33160c;
+  color: #fff1da;
+  width: 100%;
+}
+.cream > span {
+  background: #ffffff15;
+}
+.cream:hover {
+  background: #612612;
+}
+.reservation-note {
+  font-size: 8px;
+  line-height: 1.7;
+  color: #8f6e58;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* ------------------------------------------------------------------ */
+/* 05 · The footer and the booking window                             */
+/* ------------------------------------------------------------------ */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 125px;
+  background: #0e0e0c;
+  color: #f3ecdd;
+}
+footer > p,
+footer > span {
+  font-size: 9px;
+  color: #8f8777;
+}
+dialog {
+  width: min(550px, calc(100% - 32px));
+  padding: 45px;
+  border: 1px solid #d9b595;
+  border-radius: 10px;
+  background: #fff2df;
+  color: #321b10;
+}
+dialog::backdrop {
+  background: #28231999;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+dialog .eyebrow {
+  color: #b34720;
+}
+dialog h2 {
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+dialog em {
+  color: #c34714;
+}
+dialog > p:not(.eyebrow) {
+  font-size: 12px;
+  color: #8a6e57;
+  line-height: 1.7;
+}
+dialog > p.modal-price {
+  font-size: 25px;
+  color: #321b10;
+}
+.booking-status {
+  border-top: 1px solid #decbb8;
+  padding-top: 20px;
+}
+.close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  background: none;
+  border: 0;
+  font-size: 27px;
+}
+.modal-back {
+  border: 0;
+  border-bottom: 1px solid #aa3b13;
+  background: none;
+  font-size: 11px;
+  color: #aa3b13;
+  padding: 10px 0;
+}
+
+/* the programme, the booking and the footer on smaller screens (the mockup's V2 and V3 steps, merged) */
+@media (max-width: 1150px) {
+  .programme-intro h2 {
+    font-size: 39px;
+  }
+  .reservation-copy h2 {
+    font-size: 52px;
+  }
+}
+@media (max-width: 1050px) {
+  .learning-grid {
+    gap: 16px;
+  }
+  .lesson-copy {
+    padding: 16px 21px 25px;
+  }
+  .lesson-copy h3 {
+    font-size: 24px;
+  }
+  .lesson-art {
+    height: 255px;
+  }
+  .learning {
+    min-height: 490px;
+  }
+  .finished-design {
+    width: 175px;
+    height: 190px;
+    right: 5px;
+  }
+  .wireframe {
+    left: 14px;
+    width: 155px;
+    height: 190px;
+  }
+  .programme-intro {
+    gap: 30px;
+  }
+  .project-slip {
+    padding: 13px;
+    left: 20px;
+  }
+}
+@media (max-width: 850px) and (min-width: 651px) {
+  .programme-intro {
+    grid-template-columns: 1fr 2fr;
+  }
+  .reservation-grid {
+    gap: 6%;
+  }
+  .reservation-copy h2 {
+    font-size: 46px;
+  }
+  .reservation-details {
+    padding: 26px;
+  }
+}
+@media (max-width: 650px) {
+  .programme {
+    padding: 55px 0;
+  }
+  .programme-intro {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .programme-intro > .eyebrow {
+    padding-top: 0;
+    margin-bottom: 23px;
+    color: #fc7d47;
+  }
+  .programme-intro h2 {
+    font-size: 32px;
+    letter-spacing: -1.5px;
+  }
+  .programme-intro > div > p {
+    margin: 20px 0 0;
+    max-width: 320px;
+  }
+  .learning-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .learning {
+    min-height: 475px;
+  }
+  .learning-code {
+    background: #e9511d;
+  }
+  .learning-code,
+  .learning-future {
+    margin-top: 0;
+  }
+  .lesson-art {
+    height: 265px;
+  }
+  .lesson-copy {
+    padding: 16px 28px 28px;
+  }
+  .lesson-copy h3 {
+    font-size: 30px;
+  }
+  .lesson-copy > p:not(.lesson-category) {
+    max-width: none;
+    font-size: 13px;
+  }
+  .lesson-category {
+    font-size: 7px;
+  }
+  .wireframe {
+    width: 180px;
+    height: 205px;
+    left: 22px;
+    top: 23px;
+  }
+  .finished-design {
+    width: 205px;
+    height: 210px;
+    right: 15px;
+    top: 48px;
+  }
+  .editor {
+    left: 28px;
+    right: 8px;
+    top: 24px;
+    height: 225px;
+  }
+  .prompt {
+    font-size: 12px;
+  }
+  .project-slip {
+    left: 45px;
+    right: 20px;
+    padding: 18px;
+  }
+  .project-slip > b {
+    font-size: 14px;
+  }
+  .project-slip > span,
+  .project-slip > small {
+    font-size: 6px;
+  }
+  .portfolio-label {
+    font-size: 20px;
+  }
+  .programme-bottom {
+    display: block;
+    margin-top: 26px;
+  }
+  .programme-bottom > p {
+    color: #a79d8c;
+  }
+  .underlined {
+    margin-top: 23px;
+    width: fit-content;
+  }
+  .reservation {
+    padding: 55px 0;
+  }
+  .reservation-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .reservation-copy h2 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+  .reservation-copy h2 em br,
+  .session-date strong br {
+    display: none;
+  }
+  .reservation-details {
+    padding: 28px;
+    border-radius: 12px;
+  }
+  .session-date strong {
+    font-size: 23px;
+  }
+  .reservation-price > p {
+    font-size: 56px;
+  }
+  .reservation-price small {
+    font-size: 14px;
+  }
+  .reservation-note {
+    font-size: 9px;
+  }
+  .cream {
+    font-size: 12px;
+  }
+  .reservation-backdrop {
+    font-size: 290px;
+    bottom: -40px;
+    letter-spacing: -25px;
+  }
+  footer {
+    flex-wrap: wrap;
+    min-height: 140px;
+    padding-block: 30px;
+  }
+  footer > span {
+    width: 100%;
+    font-size: 8px;
+  }
+  dialog {
+    padding: 40px 25px;
+  }
+  dialog h2 {
+    font-size: 31px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
