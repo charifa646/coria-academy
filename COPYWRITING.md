@@ -77,7 +77,7 @@ Carte 2
 - Texte : Comment utiliser Claude Code pour créer un design professionnel.
 
 Carte 3
-- Illustration : TON PROCHAIN projet. · DU SAVOIR-FAIRE À L’OFFRE · Design & développement · Site vitrine · Landing page · E-commerce
+- Illustration : TON PROCHAIN projet. · DU SAVOIR-FAIRE À L’OFFRE · Design & développement · Sites web · E-commerce · Landing pages · Pages de vente
 - Catégorie : OUVRIR LE CHAMP DES POSSIBLES
 - Titre : Une compétence. Un nouvel horizon.
 - Texte : Comment transformer cette compétence en opportunité de revenus.
@@ -88,7 +88,7 @@ Bas de section, lien : Réserver ma place ↓
 
 Titre : Qui anime la masterclass
 
-Texte : Je suis Charifa, fondatrice de Ghostdesignco, une agence qui crée des sites web sur mesure pour les entrepreneurs francophones : sites vitrines, landing pages, pages de vente. Claude Code fait partie de ma façon de travailler au quotidien. Pendant cette masterclass, je te montre comment je m’en sers, de la maquette au site en ligne.
+Texte : Je suis Charifa, fondatrice de Ghostdesignco, une agence qui crée pour les entrepreneurs francophones des sites web sur mesure, des sites e-commerce, des landing pages et des pages de vente. Claude Code fait partie de ma façon de travailler au quotidien. Pendant cette masterclass, je te montre comment je m’en sers, de la maquette au site en ligne.
 
 Lien : Voir mon travail sur ghostdesignco.com (vers https://www.ghostdesignco.com)
 

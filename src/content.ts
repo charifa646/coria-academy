@@ -59,7 +59,7 @@ export const programme = {
     label: ["TON PROCHAIN", "projet."],
     slip: "DU SAVOIR-FAIRE À L’OFFRE",
     slipTitle: "Design & développement",
-    slipList: "Site vitrine · Landing page · E-commerce",
+    slipList: "Sites web · E-commerce · Landing pages · Pages de vente",
     category: "OUVRIR LE CHAMP DES POSSIBLES",
     title: ["Une compétence.", "Un nouvel horizon."],
     text: "Comment transformer cette compétence en opportunité de revenus.",
@@ -69,7 +69,7 @@ export const programme = {
 
 export const host = {
   title: "Qui anime la masterclass",
-  text: "Je suis Charifa, fondatrice de Ghostdesignco, une agence qui crée des sites web sur mesure pour les entrepreneurs francophones : sites vitrines, landing pages, pages de vente. Claude Code fait partie de ma façon de travailler au quotidien. Pendant cette masterclass, je te montre comment je m’en sers, de la maquette au site en ligne.",
+  text: "Je suis Charifa, fondatrice de Ghostdesignco, une agence qui crée pour les entrepreneurs francophones des sites web sur mesure, des sites e-commerce, des landing pages et des pages de vente. Claude Code fait partie de ma façon de travailler au quotidien. Pendant cette masterclass, je te montre comment je m’en sers, de la maquette au site en ligne.",
   link: "Voir mon travail sur ghostdesignco.com",
   href: "https://www.ghostdesignco.com",
 };
